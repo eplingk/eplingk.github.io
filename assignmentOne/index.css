@@ -1,0 +1,15 @@
+html{
+    padding:30%
+}
+.name{
+    background-color: blue;
+    color: white;
+    font-size: large;
+    float: right;
+}
+.link{
+    color: red;
+}
+.theEnd{
+    background-color: blue;
+}
