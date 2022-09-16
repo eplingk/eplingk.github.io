@@ -1,15 +1,33 @@
 html{
     padding:30%
 }
+.Cap{
+    max-height: 150px;
+    max-width: 100px;
+    
+}
 .name{
     background-color: blue;
     color: white;
     font-size: large;
     float: right;
+    padding-right: 30%;
 }
-.link{
-    color: red;
+div{
+    background-color: blue;
 }
+a:link{
+    color: red;   
+}
+a:hover{
+    color: blue;
+}
+a:visited{
+    color: black;
+}
+
 .theEnd{
     background-color: blue;
+    text-align: center;
+    color: white;
 }
