@@ -4,14 +4,19 @@ html{
 .Cap{
     max-height: 150px;
     max-width: 100px;
+    padding-left: 20%;
+    padding-top: 5%;
+    padding-bottom: 5%;
     
 }
 .name{
     background-color: blue;
     color: white;
-    font-size: large;
+    font-size: 30px;
     float: right;
-    padding-right: 30%;
+    padding-right: 20%;
+    padding-top: 5%;
+    
 }
 div{
     background-color: blue;
