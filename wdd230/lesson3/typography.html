@@ -5,19 +5,26 @@
         <meta name="viewport" content="width=device-width, inital-scale=1.0">
         <title>Chamber of Commerce</title>
        <!-- Will put this when css file is made: <link rel="stylesheet" href="nameofcssfile.css"> -->
+       <!--Will also move all "Style" information in html documents into css file when that is made-->
+       <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Kanit:wght@600&family=Major+Mono+Display&display=swap" rel="stylesheet">
     </head>
     <body>
         <nav>
             <div class="heading">
                 <h4>Navagation Bar</h4>
             </div>
-            <ul class="navLinks">
-                <li><a class="active" href="index.html">Home</a></li>
-                <li><a class="active" href="target-audience.html">Target Audience</a></li>
-                <li><a class="active" href="color-scheme.html">Color Scheme</a></li>
-                <li><a class="active" href="typography.html">Typography</a></li>
+            <ul style="display:flex;" class="navLinks">
+                <li style="margin-right: 2rem;"><a class="active" href="index.html">Home</a></li>
+                <li style="margin-right: 2rem;"><a class="active" href="target-audience.html">Target Audience</a></li>
+                <li style="margin-right: 2rem;"><a class="active" href="color-scheme.html">Color Scheme</a></li>
+                <li style="margin-right: 2rem;"><a class="active" href="typography.html">Typography</a></li>
             </ul>
         </nav>
-        <h1>This is the typography page</h1>
+        <h1 style="font-family:'Kanit', sans-serif;">This is the typography page</h1>
+        <p style="font-family:'Major Mono Display', monospace;">Large texts, such as headings, titles and text on large buttons will be <br>
+        the font: Kanit (See heading above this paragraph as an example).<br>
+        The smaller (or basically any wording that was not previously mentioned) will be the font: Major Mono Display (as this paragraph is).</p>
     </body>
 </html>
