@@ -1,0 +1,12 @@
+.navLinks{
+    display: flex;
+}
+.active{
+    margin-right: 2rem;
+}
+h1{
+    font-family:'Kanit', sans-serif;
+}
+p{
+    font-family:'Red Hat Mono', monospace;
+}
