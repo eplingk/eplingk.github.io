@@ -1,3 +1,5 @@
-/*@media (max-width: 3000px) {
-     CSS that should be displayed if width is equal to or less than 800px goes here 
-  } */
+@media (min-width: 64em) {
+   h1{
+      color: red;
+   }
+  } 

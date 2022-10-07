@@ -1,10 +1,17 @@
-/*@media (max-width: 800px) {
-     CSS that should be displayed if width is equal to or less than 800px goes here 
-  } */
-
 .navLinks{
     display: flex;
     background-color: #8B928F;
+    list-style: none;
+    font-family: 'kanit', sans-serif;
+    font-size: large;
+    flex-direction: row-reverse;
+    padding: 2%;
+}
+.logo{
+    display: flex;
+    flex-direction: row;
+    float: left;
+    padding-left: 2%;
 }
 .active{
     margin-right: 2rem;
@@ -19,8 +26,9 @@ p{
 }
 body{
     background-image: url("https://i.imgur.com/55eTqS5.jpg");
-    text-align: center;
-    
+    text-align: center;  
+    width: 100%;
+    height: auto;
 }
 .gray{
     color:#8B928F;
