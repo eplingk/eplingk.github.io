@@ -2,4 +2,39 @@
    h1{
       color: red;
    }
+   .button{
+      display: none;
   } 
+
+
+
+
+  .hamburger{
+   display: none;
+  }
+  .navLinks{
+   display: flex;
+   background-color: #8B928F;
+   list-style: none;
+   font-family: 'kanit', sans-serif;
+   font-size: large;
+   flex-direction: row-reverse;
+   padding: 2%;
+}
+nav{
+   padding-right: 2%;
+   overflow: hidden;
+   color: white;
+   position: relative;
+}
+
+
+
+
+
+
+
+
+
+
+}
