@@ -1,27 +1,13 @@
 @media (min-width: 32.5em) {
      h1{color:purple}
 
-     .button{
+   
+     .largeScreenNav{
       display: none;
   }
-  .hamburger{
+  .title{
    display: none;
   }
-  .navLinks{
-   display: flex;
-   background-color: #8B928F;
-   list-style: none;
-   font-family: 'kanit', sans-serif;
-   font-size: large;
-   flex-direction: row-reverse;
-   padding: 2%;
-}
-nav{
-   padding-right: 2%;
-   overflow: hidden;
-   color: white;
-   position: relative;
-}
 
 
 

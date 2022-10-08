@@ -1,34 +1,42 @@
 @media (min-width: 64em) {
-   h1{
-      color: red;
-   }
-   .button{
+   
+  
+   .navbar{
       display: none;
-  } 
+   }
 
-
-
-
-  .hamburger{
-   display: none;
+  h1{
+   color: red;
+   padding-right: 20%;
   }
-  .navLinks{
-   display: flex;
-   background-color: #8B928F;
+
+
+  
+  .largeScreenNav{
+   width: 100%;
    list-style: none;
+   display: flex;
+   flex-direction: row;
+   background-color: lightgray;
    font-family: 'kanit', sans-serif;
    font-size: large;
-   flex-direction: row-reverse;
+   justify-content: space-between;
    padding: 2%;
 }
-nav{
-   padding-right: 2%;
-   overflow: hidden;
-   color: white;
-   position: relative;
+ul{
+   display: flex;
+   justify-content: space-between;
+   flex-direction: row;
+   list-style: none;
+   padding-left: 2%;
+
 }
-
-
+a{
+   padding: 5%;
+}
+.active{
+   padding-left: 5%;
+}
 
 
 
