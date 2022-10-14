@@ -10,7 +10,26 @@
    padding-right: 20%;
   }
 
+  a:hover{
+   color:black;
+   font-style:underline;
+  }
 
+  .iconF{
+   padding-left: 3%;
+   padding-top: 1%;
+   display: flex;
+  }
+  .iconF:hover{
+   opacity: .5;
+  }
+  .iconT{
+   padding-left: 3%;
+   display: flex;
+  }
+  .iconT:hover{
+   opacity: .5;
+  }
   
   .largeScreenNav{
    width: 100%;
@@ -22,6 +41,7 @@
    font-size: large;
    justify-content: space-between;
    padding: 2%;
+
 }
 ul{
    display: flex;
@@ -29,13 +49,14 @@ ul{
    flex-direction: row;
    list-style: none;
    padding-left: 2%;
-
 }
 a{
    padding: 5%;
 }
+
 .active{
    padding-left: 5%;
+   
 }
 
 
