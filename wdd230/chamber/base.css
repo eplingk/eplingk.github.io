@@ -10,6 +10,9 @@
 .gridL{
   display:none;
 }
+.sLight3{
+  display: none;
+}
 h1{
     font-family:'Kanit', sans-serif;
     color: #0AE2FF;
