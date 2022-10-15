@@ -103,7 +103,11 @@ a{
       grid-row: 1 / span 3 !important;
       display: inline !important;
   }
-
+  .sLight3 {
+   display: flex;
+   flex-direction:row;
+   margin-left: 67pt;
+  }
 
 
 
