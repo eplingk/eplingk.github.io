@@ -11,6 +11,14 @@
         <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@600&family=Red+Hat+Mono&display=swap" rel="stylesheet">
+
+
+<script class="date">
+  var now  = new Date();        
+    var hrs  = now.getHours();    
+    var mins = now.getMinutes();
+    document.writeln( now);
+</script>
        
         <a href="index.html"><img class= "logo" src="https://eplingk.github.io/wdd230/chamber/ifcoclogo.png" alt="logo" width="200" height="200"></a>
         <nav>
@@ -50,14 +58,76 @@
             </ul>
             <h1>Idaho Falls Chamber of Commerce</h1>
           </nav>
+
         </head>
 <body>
-        <p class="pageFiller"> Page still under construction</p>
+     <div class="banner">
+      <script class="banner">
+        var now  = new Date();       
+      var hrs  = now.getHours();    
+      var mins = now.getMinutes();
+      var secs = now.getSeconds();
+    
+    
+    var weekday = new Array(7);
+  weekday[0]=  "Sunday";
+  weekday[1] = "Monday";
+  weekday[2] = "Tuesday";
+  weekday[3] = "Wednesday";
+  weekday[4] = "Thursday";
+  weekday[5] = "Friday";
+  weekday[6] = "Saturday";
+  var day = weekday[now.getDay()];
+  
+  
+      
+    document.writeln("</p>");
+      if (hrs < 12) {
+        document.writeln("<h2>Good Morning!</h2>");
+      } else {
+        document.writeln("<h2>Good Afternoon!</h2>");
+      }
+    if (day == "Monday") {
+        document.writeln("<h2>🤝🏼 Come join us for the chamber meet and greet Wednesday at 7:00 p.m.</h2>");
+      } 
+    else if (day == "Tuesday"){
+        document.writeln("<h2>🤝🏼 Come join us for the chamber meet and greet Wednesday at 7:00 p.m.</h2>");
+      }
+     else {
+        document.writeln("<h2>Did you miss our meet and greet? No worries! There are always chances to meet your fellow commerce members.</h2>");
+      }
+      </script>
+      </div>
+     
+     <div class="grid"> 
+
+      <div class="callToAction"><p>Call to action!!!</p></div>
+      <div class="event"><p>EVENT</p></div>
+      <div class="weather"><P>The&nbsp;Weather: </P></div>
+      <div class="join"><p>JoIn Us PlEaSe</p></div>
+      <div class="newsRelease"><p>!!!NEWS!!!</p></div>
+      <div class="sLight">
+        <div class="sLightOne">
+          <p>Spotlight 1</p>
+
+        </div>
+        <div class="sLightTwo">
+          <p>Spotlight 2</p>
+
+        </div>
+      </div>
+
+     </div>  
+    
+    
+   
+     
+
         
       
 
             <footer class="footer">
-                <img class= "footer" src="https://i.imgur.com/bAnfFvL.png" alt="logo" width="40" height="40">
+                <img class= "footerlogo" src="https://i.imgur.com/bAnfFvL.png" alt="logo" width="40" height="40">
                 <p class="footer">Contact us at: 510-888-9158 </br>
                 or ifcocemail@gmail.com</p>
                 <li class="footer" id="map"><a href = "https://www.google.com/maps/place/Idaho+Falls,+ID/@43.4926827,-112.1037469,12z/data=!3m1!4b1!4m5!3m4!1s0x5354594e739512b5:0x2311c9fc094c49c9!8m2!3d43.4926607!4d-112.0407584">Link to our map</a></li>

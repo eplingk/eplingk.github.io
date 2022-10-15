@@ -4,24 +4,61 @@
 .title{
     display: none;
 }
+.gridM{
+  display: none;
+}
+.gridL{
+  display:none;
+}
 h1{
     font-family:'Kanit', sans-serif;
+    color: #0AE2FF;
 }
-.pageFiller{
-    font-family:'Red Hat Mono', monospace;
-    background-color: white;
-    padding: 30%;
-    
+.date{
+  display: flex;
+  position: relative;
 }
+
+
+.banner{
+  background-color: white;
+  opacity: .8;
+  border-color: #0e2431;
+  border: dashed;
+  padding: 5%;
+  margin-top: 5%;
+  margin-left: 10%;
+  margin-right: 10%;
+  margin-bottom: 5%;
+  
+
+
+}
+html { 
+  background: url("https://eplingk.github.io/wdd230/chamber/IMG_0295.JPEG") no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  text-align: center;
+  width: 100%;
+  height: auto;
+}
+
+
 p{
     font-family: 'Red Hat Mono', monospace;
 }
-body{
-    background-image: url("https://eplingk.github.io/wdd230/chamber/IMG_0295.JPEG");
-    text-align: center;  
-    width: 100%;
-    height: auto;
+
+
+
+.grid{
+  background-color: white;
 }
+
+
+
+
 
 #map{
     list-style: none;
@@ -29,6 +66,13 @@ body{
 }
 .footer{
     background-color:lightgray;
+}
+.footerlogo{
+  margin-top: 2%;
+}
+
+#lastModified{
+  padding-bottom: 2%;
 }
 
 * {
@@ -142,6 +186,11 @@ body{
     padding-left: 50px;
     transition: transform 0.5s ease-in-out;
     text-align: center;
+    background-color: #8B928F;
+    position: relative;
+    z-index: 1;
+    
+    
   }
   
   .navbar .menu-items li {

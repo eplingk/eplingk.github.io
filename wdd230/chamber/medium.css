@@ -1,5 +1,5 @@
 @media (min-width: 32.5em) {
-     h1{color:purple}
+     
 
    
      .largeScreenNav{
@@ -8,7 +8,59 @@
   .title{
    display: none;
   }
-
+ 
+  .grid{
+    background-color: white;
+    display: flex;
+    text-align: center;
+    flex-wrap: wrap;
+  }
+  .callToAction{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    background-color: lightgray;
+  }
+  .event{
+    display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  width: 70%;
+  background-color: lightblue;
+  }
+  .weather{
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+    background-color: orange;
+    
+  }
+  .newsRelease{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    background-color: red;
+  }
+  .join{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    background-color: chartreuse;
+  }
+  .sLight{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    background-color: blueviolet; 
+  }
+ .sLightOne{
+    width:50%;
+    background-color: blueviolet;
+ }
+ .sLightTwo{
+    width:50%;
+    background-color: rgb(173, 128, 216);
+ }
 
 
 

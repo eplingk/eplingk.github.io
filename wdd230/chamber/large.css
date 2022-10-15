@@ -4,9 +4,10 @@
    .navbar{
       display: none;
    }
+  
 
   h1{
-   color: red;
+   
    padding-right: 20%;
   }
 
@@ -31,12 +32,13 @@
    opacity: .5;
   }
   
+  
   .largeScreenNav{
    width: 100%;
    list-style: none;
    display: flex;
    flex-direction: row;
-   background-color: lightgray;
+   background-color: #8B928F;
    font-family: 'kanit', sans-serif;
    font-size: large;
    justify-content: space-between;
@@ -60,8 +62,47 @@ a{
 }
 
 
+   #map{
+       list-style: none;
+   
+   }
+   .footer{
+       background-color:lightgray;
+   }
+    
+   .grid{
+      display: grid;
+   }
+   .event {
+      grid-column: 1 !important; 
+      grid-row: 1 !important;
+  }
 
+  .weather {
+      grid-column: 1 !important;
+      grid-row: 2 !important;
+  }
 
+  .join {
+      grid-column: 1 !important;
+      grid-row: 3 !important;
+  }
+
+  .callToAction {
+      grid-column: 2 / span 3 !important;
+      grid-row: 1 / span 2 !important;
+  }
+
+  .newsRelease {
+      grid-column: 2 / span 3 !important;
+      grid-row: 3 !important;
+  }
+
+  .sLight {
+      grid-column: 4 !important;
+      grid-row: 1 / span 3 !important;
+      display: inline !important;
+  }
 
 
 
