@@ -12,7 +12,7 @@
   }
 
   a:hover{
-   color:black;
+   color:#0AE2FF;
    font-style:underline;
   }
 
@@ -35,7 +35,7 @@
   
   .largeScreenNav{
    width: 100%;
-   list-style: none;
+   text-decoration: none;
    display: flex;
    flex-direction: row;
    background-color: #8B928F;
@@ -54,6 +54,8 @@ ul{
 }
 a{
    padding: 5%;
+   text-decoration: none;
+   color: #0e2431;
 }
 
 .active{
