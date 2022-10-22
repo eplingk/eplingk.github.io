@@ -13,12 +13,7 @@
 .title{
     display: none;
 }
-.gridM{
-  display: none;
-}
-.gridL{
-  display:none;
-}
+
 .sLight3{
   display: none;
 }
@@ -55,10 +50,10 @@ p{
 
 
 
-/* .grid{
+.grid{
+  background-color: beige;
   
-  
-} */
+}
 
 .Jbutton{
   font-family:'Kanit', sans-serif;
