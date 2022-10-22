@@ -43,6 +43,7 @@
    font-size: large;
    justify-content: space-between;
    padding: 2%;
+   
 
 }
 ul{
@@ -74,41 +75,69 @@ a{
     
    .grid{
       display: grid;
+      margin-top: 10%;
+      margin-bottom: 10%;
+      margin-right: 10%;
+      margin-left: 10%;
+      
+      
    }
    .event {
       grid-column: 1 !important; 
       grid-row: 1 !important;
+      background-color: beige;
+      margin: 15%;
+    
   }
 
   .weather {
       grid-column: 1 !important;
       grid-row: 2 !important;
+      background-color: #0AE2FF;
+      margin: 10%;
+      
   }
 
   .join {
       grid-column: 1 !important;
       grid-row: 3 !important;
+      background-color: beige;
+      margin: 10%;
+      
   }
 
   .callToAction {
-      grid-column: 2 / span 3 !important;
+      grid-column: 2 / span 2 !important;
       grid-row: 1 / span 2 !important;
+      padding-top: 2%;
+      background-color: beige;
+      
   }
 
   .newsRelease {
       grid-column: 2 / span 3 !important;
       grid-row: 3 !important;
+      background-color: beige;
+      margin: 10%;
+      
   }
 
   .sLight {
       grid-column: 4 !important;
       grid-row: 1 / span 3 !important;
       display: inline !important;
+      background-color: beige;
+      margin-right: 10%;
+      margin-left: 15%;
+      margin-bottom: 70% ;
+      
   }
   .sLight3 {
    display: flex;
    flex-direction:row;
-   margin-left: 73pt;
+   background-color: beige;
+   margin: 10%;
+   
   }
 
 

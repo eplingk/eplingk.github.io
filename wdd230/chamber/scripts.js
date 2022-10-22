@@ -1,54 +1,17 @@
-// var days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
-// console.log(days[new Date().getDay()]);
 
+// // select the elements to manipulate (output to)
+// const datefield = document.querySelector(".date");
+// const datefieldUK = document.querySelector("aside"); // for european/family history format with day first.
 
+// // derive the current date using a date object
+// const today = new Date();
+// const fulldate = new Intl.DateTimeFormat("en-US", { dateStyle: "full" }).format(
+// 	today
+// );
+// const fulldateUK = new Intl.DateTimeFormat("en-UK", {
+// 	dateStyle: "full"
+// }).format(today);
+// // long, medium, short options ... try them
 
-//var today = new Date();
-//var dd = String(today.getDate()).padStart(2, '0');
-//var mm = String(today.getMonth() + 1).padStart(2, '0'); //January is 0!
-//var yyyy = today.getFullYear();
-
-
-//today = mm + '/' + dd + '/' + yyyy;
-//document.write(today);
-
-
-
-
-//document.querySelector(
-//	"#lastModified"
-//).textContent = `Last Modification: ${document.lastModified}`;
-
-    //       var now  = new Date();        // current date/time
-    //       var hrs  = now.getHours();    // 0 to 23
-    //       var mins = now.getMinutes();
-    //       var secs = now.getSeconds();
-        
-        
-    //     var weekday = new Array(7);
-    //   weekday[0]=  "Sunday";
-    //   weekday[1] = "Monday";
-    //   weekday[2] = "Tuesday";
-    //   weekday[3] = "Wednesday";
-    //   weekday[4] = "Thursday";
-    //   weekday[5] = "Friday";
-    //   weekday[6] = "Saturday";
-    //   var day = weekday[now.getDay()];
-      
-      
-          
-    //     document.writeln("</p>");
-    //       if (hrs < 12) {
-    //         document.writeln("<h2>Good Morning!</h2>");
-    //       } else {
-    //         document.writeln("<h2>Good Afternoon!</h2>");
-    //       }
-    //     if (day == "Monday") {
-    //         document.writeln("<h2>🤝🏼 Come join us for the chamber meet and greet Wednesday at 7:00 p.m.</h2>");
-    //       } 
-    //     else if (day == "Saturday"){
-    //         document.writeln("<h2>🤝🏼 Come join us for the chamber meet and greet Wednesday at 7:00 p.m.</h2>");
-    //       }
-    //      else {
-    //         document.writeln("<h2>Did you miss our meet and greet? No worries! There are always chances to meet your fellow commerce members.</h2>");
-    //       }
+// datefield.innerHTML = `<em>${fulldate}</em>`;
+// datefieldUK.innerHTML = `<em>${fulldateUK}</em>`;

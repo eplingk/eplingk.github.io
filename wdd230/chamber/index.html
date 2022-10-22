@@ -4,7 +4,7 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, inital-scale=1.0">
         <title>Chamber of Commerce</title>
-        <script src="scripts.js"></script> 
+        <script type="text/javascript" src="scripts.js"></script>
         <link rel="stylesheet" href="base.css"> 
         <link rel="stylesheet" href="medium.css"> 
         <link rel="stylesheet" href="large.css"> 
@@ -12,17 +12,33 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@600&family=Red+Hat+Mono&display=swap" rel="stylesheet">
 
-
+</head>
+<header>
+  
+   
 <script class="date">
-  var now  = new Date();        
-    var hrs  = now.getHours();    
-    var mins = now.getMinutes();
-    document.writeln(now);
-  
-  
+  // select the elements to manipulate (output to)
+const datefield = document.querySelector(".date");
+const datefieldUK = document.querySelector("aside"); // for european/family history format with day first.
+
+// derive the current date using a date object
+const today = new Date();
+const fulldate = new Intl.DateTimeFormat("en-US", { dateStyle: "full" }).format(
+	today
+);
+const fulldateUK = new Intl.DateTimeFormat("en-UK", {
+	dateStyle: "full"
+}).format(today);
+// long, medium, short options ... try them
+
+datefield.innerHTML = `${fulldate}`;
+datefieldUK.innerHTML = `${fulldateUK}`;
+
+
 </script>
+
        
-        <a href="index.html"><img class= "logo" src="https://eplingk.github.io/wdd230/chamber/ifcoclogo.png" alt="logo" width="200" height="200"></a>
+        <a href="index.html"><img class= "logo" src="https://raw.githubusercontent.com/eplingk/eplingk.github.io/main/wdd230/chamber/ifcoclogo.webp" alt="logo" width="200" height="200"></a>
         <nav>
             <div class="navbar">
               <div class="container nav-container">
@@ -61,10 +77,11 @@
             <h1>Idaho Falls Chamber of Commerce</h1>
           </nav>
 
-        </head>
+        </header>
 <body>
      <div class="banner">
       <script class="banner">
+        
 
         var now  = new Date();       
       var hrs  = now.getHours();    
@@ -81,46 +98,90 @@
   weekday[5] = "Friday";
   weekday[6] = "Saturday";
   var day = weekday[now.getDay()];
-  
-  
+    
       
-    document.writeln("</p>");
-      if (hrs < 12) {
-        document.writeln("<h2>Good Morning!</h2>");
-      } else {
-        document.writeln("<h2>Good Afternoon!</h2>");
-      }
     if (day == "Monday") {
-        document.writeln("<h2>🤝🏼 Come join us for the chamber meet and greet Wednesday at 7:00 p.m.</h2>");
+        document.getElementsByClassName("banner") = "<h2>🤝🏼 Come join us for the chamber meet and greet Wednesday at 7:00 p.m.</h2>";
+        document.getElementsByClassName("banner").style.backgroundColor = "white";
+        document.getElementsByClassName("banner").style.opacity = "0.8";
+        document.getElementsByClassName("banner").style.borderColor = "#0e2431";
+        document.getElementsByClassName("banner").style.border = "dashed";
+        document.getElementsByClassName("banner").style.padding = "5%";
+        document.getElementsByClassName("banner").style.marginTop = "5%";
+        document.getElementsByClassName("banner").style.marginLeft = "10%";
+        document.getElementsByClassName("banner").style.marginRight = "10%";
+        document.getElementsByClassName("banner").style.marginBottom = "5%";
       } 
     else if (day == "Tuesday"){
-        document.writeln("<h2>🤝🏼 Come join us for the chamber meet and greet Wednesday at 7:00 p.m.</h2>");
+      document.getElementsByClassName("banner") = "<h2>🤝🏼 Come join us for the chamber meet and greet Wednesday at 7:00 p.m.</h2>";
+      document.getElementsByClassName("banner").style.backgroundColor = "white";
+      document.getElementsByClassName("banner").style.opacity = "0.8";
+      document.getElementsByClassName("banner").style.borderColor = "#0e2431";
+      document.getElementsByClassName("banner").style.border = "dashed";
+      document.getElementsByClassName("banner").style.padding = "5%";
+      document.getElementsByClassName("banner").style.marginTop = "5%";
+      document.getElementsByClassName("banner").style.marginLeft = "10%";
+      document.getElementsByClassName("banner").style.marginRight = "10%";
+      document.getElementsByClassName("banner").style.marginBottom = "5%";
+        
       }
      else {
-        document.writeln("<h2>Did you miss our meet and greet? No worries! There are always chances to meet your fellow commerce members.</h2>");
+        document.getElementsByClassName("banner").style.display = "none";
       }
       </script>
+
       </div>
      
      <div class="grid"> 
 
-      <div class="callToAction"><p>Call to action!!!</p></div>
-      <div class="event"><p>EVENT</p></div>
-      <div class="weather"><P>The&nbsp;Weather: </P></div>
-      <div class="join"><p>JoIn Us PlEaSe</p></div>
-      <div class="newsRelease"><p>!!!NEWS!!!</p></div>
+      <div class="callToAction">
+        <h2>Welcome to Idaho Falls</h2>
+        <picture>
+          <source class="largeImage" srcset="https://eplingk.github.io/wdd230/chamber/wdd230-org.jpg" media="(min-width:400px) and (max-width:300px)">
+          <source class="medImage" srcset="https://eplingk.github.io/wdd230/chamber/wdd230-org.jpg" media="(min-width:300px) and (max-width:200px)">
+          <source class="smllImage" srcset="https://eplingk.github.io/wdd230/chamber/wdd230-org.jpg" media="(min-width:200px) and (max-width:100px)">
+              <img src="https://eplingk.github.io/wdd230/chamber/wdd230-org.jpg" width="500" height="300" >
+              </picture>
+              <div class="Jbutton"><a href="#">Join the Commerce</a></div>
+                  </div>
+      <div class="event"><p>---EVENT---</p>
+      <div class="box"><p>UP NEXT ON OUR CALENDAR:</p><br><p>Oct 29th: buisness TRUNKorTREAT</p><br><p>come support local business and take their candy!</p></div>
+      </div>
+      <div class="weather"><P>The&nbsp;Weather: </P><br>
+        <p class="theSun">\    |    /  </p><br>
+        <p class="theSun">---  O   ---    </p><br>
+        <p class="theSun">/    |    \</p><br>
+      <script>
+          var v = 32;
+          var t = 10;
+          var f = 35.74 + 0.6215*t - 35.75*(v**0.16) + 0.4275*t*(v**0.16)
+          document.writeln("Wind chill: " + f + "km/h");
+
+      </script>
+    </div>
+      <div class="join"><p>JoIn Us PlEaSe</p>
+        <div class="Jbutton"><a href="#">Join the Commerce</a></div></div>
+      <div class="newsRelease"><p>!!!NEWS!!!</p><br>
+      <p>See the latest on COVID-19: </p><a href="https://pandemicpatients.org/?gclid=Cj0KCQjwqc6aBhC4ARIsAN06NmPb9JDeGUE54NmqCGdHA5HPZjWSpX-1196SXGDNQpmmEMaMiadN-J0aAmLCEALw_wcB">Click Here</a></div>
       <div class="sLight">
         <div class="sLightOne">
-          <p>Spotlight 1</p>
+          <h2>Spotlight</h2>
+          <p>James Carlton, 75, is the oldest business owner in Idaho.
+            His business having been successful for 32 years!
+          </p>
 
         </div>
         <div class="sLightTwo">
-          <p>Spotlight 2</p>
+          <h2>Spotlight</h2>
+          <p>High School senior, Callie Termane, tells us about her plan to become 
+            one of our local business owners.
+          </p>
 
         </div>
 
         <div class="sLight3">
-          <p>Spotlight 3</p>
+          <h2> Spotlight </h2>
+          <p>Idaho Falls Chamber of Commerce celebrates 20 years of growing local businesses.</p>
         </div>
       </div>
 
@@ -128,13 +189,13 @@
     
     
    
-     
+    </main>
 
         
       
 
             <footer class="footer">
-                <img class= "footerlogo" src="https://i.imgur.com/bAnfFvL.png" alt="logo" width="40" height="40">
+                <img class= "footerlogo" src="https://raw.githubusercontent.com/eplingk/eplingk.github.io/main/wdd230/chamber/ifcoclogo.webp" alt="logo" width="40" height="40">
                 <p class="footer">Contact us at: 510-888-9158 </br>
                 or ifcocemail@gmail.com</p>
                 <li class="footer" id="map"><a href = "https://www.google.com/maps/place/Idaho+Falls,+ID/@43.4926827,-112.1037469,12z/data=!3m1!4b1!4m5!3m4!1s0x5354594e739512b5:0x2311c9fc094c49c9!8m2!3d43.4926607!4d-112.0407584">Link to our map</a></li>
@@ -146,7 +207,7 @@
                                            + document.lastModified
                                            + '</i></small>');
                         </script>
-                        </p></div></main>
+                        </p></div>
             </footer>
     </body>
 </html>
