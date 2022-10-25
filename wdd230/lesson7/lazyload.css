@@ -3,7 +3,7 @@
     flex-direction: column;
     margin-top: 3px;
     margin-left: 45%;
-    background-color: green;
+    background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTF9m5TNTpkndWT5Y_xQpwHF759VmJuUNyeQlJH-M0ZzKsQ4_E5AB3Lk-a_N8JCF-cSMfI&usqp=CAU");
     filter: blur(0em);
     transition: filter 0.5s;
 }
@@ -12,7 +12,7 @@
     flex-direction: column;
     margin-top: 3px;
     margin-left: 45%;
-    background-color: rgb(72, 72, 116);
+    background-image: url("https://htmlcolorcodes.com/assets/images/colors/blue-gray-color-solid-background-1920x1080.png");
     filter: blur(0em);
     transition: filter 0.5s;
 }
@@ -21,7 +21,7 @@
     flex-direction: column;
     margin-top: 3px;
     margin-left: 45%;
-    background-color: rgb(107, 50, 50);
+    background-image: url("https://sherwin.scene7.com/is/image/sw/clr_10640641_lodge_brown_stain_color");
     filter: blur(0em);
     transition: filter 0.5s;
 }
@@ -30,7 +30,7 @@
     flex-direction: column;
     margin-top: 3px;
     margin-left: 45%;
-    background-color: blue;
+    background-image: url("https://upload.wikimedia.org/wikipedia/commons/thumb/f/ff/Solid_blue.svg/800px-Solid_blue.svg.png");
     filter: blur(0em);
     transition: filter 0.5s;
 }
@@ -39,7 +39,7 @@
     flex-direction: column;
     margin-top: 3px;
     margin-left: 45%;
-    background-color: pink;
+    background-image: url("https://i.guim.co.uk/img/media/d0105731685e5b2b3daecf2fa00c9affaba832f1/0_0_2560_1536/master/2560.jpg?width=1200&height=900&quality=85&auto=format&fit=crop&s=813bbc6e03dae66c2d041b98615ea63c");
     filter: blur(0em);
     transition: filter 0.5s;
 }
@@ -48,7 +48,7 @@
     flex-direction: column;
     margin-top: 3px;
     margin-left: 45%;
-    background-color: beige;
+    background-image: url("https://htmlcolorcodes.com/assets/images/colors/light-gray-color-solid-background-1920x1080.png");
     filter: blur(0em);
     transition: filter 0.5s;
 }
