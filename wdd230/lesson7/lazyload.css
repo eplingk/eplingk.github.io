@@ -1,0 +1,54 @@
+.imgOne{
+    display: flex;
+    flex-direction: column;
+    margin-top: 3px;
+    margin-left: 45%;
+    background-color: green;
+    filter: blur(0em);
+    transition: filter 0.5s;
+}
+.imgTwo{
+    display: flex;
+    flex-direction: column;
+    margin-top: 3px;
+    margin-left: 45%;
+    background-color: rgb(72, 72, 116);
+    filter: blur(0em);
+    transition: filter 0.5s;
+}
+.imgThree{
+    display: flex;
+    flex-direction: column;
+    margin-top: 3px;
+    margin-left: 45%;
+    background-color: rgb(107, 50, 50);
+    filter: blur(0em);
+    transition: filter 0.5s;
+}
+.imgFour{
+    display: flex;
+    flex-direction: column;
+    margin-top: 3px;
+    margin-left: 45%;
+    background-color: blue;
+    filter: blur(0em);
+    transition: filter 0.5s;
+}
+.imgFive{
+    display: flex;
+    flex-direction: column;
+    margin-top: 3px;
+    margin-left: 45%;
+    background-color: pink;
+    filter: blur(0em);
+    transition: filter 0.5s;
+}
+.imgSix{
+    display: flex;
+    flex-direction: column;
+    margin-top: 3px;
+    margin-left: 45%;
+    background-color: beige;
+    filter: blur(0em);
+    transition: filter 0.5s;
+}
