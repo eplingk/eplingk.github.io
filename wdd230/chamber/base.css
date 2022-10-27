@@ -6,7 +6,9 @@
   border:black;
   border-style: dashed;
 }
-
+#feelTemp{
+  float: left;
+}
 .largeScreenNav{
     display: none;
 }
@@ -240,3 +242,7 @@ p{
   .icon:hover{
     opacity: .5;
   }
+  .wImage{
+    max-width: 400px;
+    max-height: 200px;
+}

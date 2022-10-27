@@ -140,7 +140,7 @@ datefieldUK.innerHTML = `${fulldateUK}`;
           <source class="largeImage" srcset="https://eplingk.github.io/wdd230/chamber/wdd230-org.jpg" media="(min-width:400px) and (max-width:300px)">
           <source class="medImage" srcset="https://eplingk.github.io/wdd230/chamber/wdd230-org.jpg" media="(min-width:300px) and (max-width:200px)">
           <source class="smllImage" srcset="https://eplingk.github.io/wdd230/chamber/wdd230-org.jpg" media="(min-width:200px) and (max-width:100px)">
-              <img src="https://eplingk.github.io/wdd230/chamber/wdd230-org.jpg" width="500" height="300" >
+              <img class="wImage" src="https://eplingk.github.io/wdd230/chamber/wdd230-org.jpg" width="600" height="400" >
               </picture>
               <div class="Jbutton"><a href="#">Join the Commerce</a></div>
                   </div>
@@ -151,13 +151,26 @@ datefieldUK.innerHTML = `${fulldateUK}`;
         <p class="theSun">\    |    /  </p><br>
         <p class="theSun">---  O   ---    </p><br>
         <p class="theSun">/    |    \</p><br>
+        <p id="feelTemp"></p>
+
       <script>
-          var v = 32;
-          var t = 10;
-          var f = 35.74 + 0.6215*t - 35.75*(v**0.16) + 0.4275*t*(v**0.16)
-          document.writeln("Wind chill: " + f + "km/h");
+
+          let speed = 25;
+          let temp = 10;
+          buildWC(speed,temp);
+
+          function buildWC(speed, temp){
+            let feelTemp = document.getElementById('feelTemp');
+            let wc = 35.74 + 0.6215 * temp - Math.pow(speed, 0.16) + 0.4275 * temp * Math.pow(speed, 0.16);
+            console.log(wc);
+            wc = Math.floor(wc);
+            wc = (wc > temp) ? temp : wc;
+            console.log(wc);
+            feelTemp.innerHTML = "Windchill: " + wc + "°F";
+          }
 
       </script>
+      
     </div>
       <div class="join"><p>JoIn Us PlEaSe</p>
         <div class="Jbutton"><a href="#">Join the Commerce</a></div></div>
