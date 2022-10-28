@@ -5,6 +5,7 @@
         <meta name="viewport" content="width=device-width, inital-scale=1.0">
         <title>Chamber of Commerce</title>
         <script type="text/javascript" src="scripts.js"></script>
+        <script type="text/javascript" src="windchill.js"></script>
         <link rel="stylesheet" href="base.css"> 
         <link rel="stylesheet" href="medium.css"> 
         <link rel="stylesheet" href="large.css"> 
@@ -151,25 +152,21 @@ datefieldUK.innerHTML = `${fulldateUK}`;
         <p class="theSun">\    |    /  </p><br>
         <p class="theSun">---  O   ---    </p><br>
         <p class="theSun">/    |    \</p><br>
-        <p id="feelTemp"></p>
+        
+        
+          <div class="forecast">
+            <span><i class="fa-solid fa-cloud-sun"></i></span>
+            <span class="temp-in-f">32</span><span>&#8457;</span>
+          </div>
+          <p class="coverage">Partly Cloudy</p>
+          <div class="wind-speed">
+            <span>Wind Speed: </span><span class="speed">10</span>
+          </div>
+          <div class="wind-chill">
+            <span>Wind Chill: </span><span class="chill"></span>
+          </div>
 
-      <script>
-
-          let speed = 25;
-          let temp = 10;
-          buildWC(speed,temp);
-
-          function buildWC(speed, temp){
-            let feelTemp = document.getElementById('feelTemp');
-            let wc = 35.74 + 0.6215 * temp - Math.pow(speed, 0.16) + 0.4275 * temp * Math.pow(speed, 0.16);
-            console.log(wc);
-            wc = Math.floor(wc);
-            wc = (wc > temp) ? temp : wc;
-            console.log(wc);
-            feelTemp.innerHTML = "Windchill: " + wc + "°F";
-          }
-
-      </script>
+      
       
     </div>
       <div class="join"><p>JoIn Us PlEaSe</p>
