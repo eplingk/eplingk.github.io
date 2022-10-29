@@ -144,3 +144,62 @@ a{
 }
 
 }
+
+.discoverGallery{
+    background-color: beige; 
+    float: left;  
+}
+
+
+.lOne{
+    display: flex;
+    flex-flow: column wrap;
+    align-content: flex-start;
+    margin: 2%;
+    
+    
+}
+
+.lOne:hover{
+    width: 500px;
+}
+.lTwo{
+    display: flex;
+    flex-flow: column wrap;
+    align-content: flex-start;
+    margin: 2%;
+    
+}
+.lTwo:hover{
+    height: 500px;
+}
+.lThree{
+    display: flex;
+    flex-flow: column wrap;
+    align-content: flex-start;
+    margin: 2%;
+    
+}
+.lThree:hover{
+    height: 500px;
+}
+.lFour{
+    display: flex;
+    flex-flow: column wrap;
+    align-content: flex-start;
+    margin: 2%;
+    
+}
+.lFour:hover{
+    width: 500px;
+}
+.lFive{
+    display: flex;
+    flex-flow: column wrap;
+    align-content: flex-start;
+    margin: 2%;
+    
+}
+.lFive:hover{
+    height: 500px;
+}
