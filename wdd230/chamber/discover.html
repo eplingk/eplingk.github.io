@@ -85,6 +85,27 @@
                                            + document.lastModified
                                            + '</i></small>');
                         </script>
+                        <button onclick="start()">Start</button>
+
+                        <button onclick="end()">End</button>
+                        <script>
+var startTime, endTime;
+
+function start() {
+  startTime = performance.now();
+};
+
+function end() {
+  endTime = performance.now();
+  var timeDiff = endTime - startTime; //in ms 
+  // strip the ms 
+  timeDiff /= 1000; 
+  
+  // get seconds 
+  var seconds = Math.round(timeDiff);
+  document.writeln(seconds + " seconds");
+}
+                        </script>
                         </p></div>
             </footer>
         </body>
