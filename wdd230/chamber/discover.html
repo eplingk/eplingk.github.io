@@ -6,6 +6,7 @@
         <link rel="stylesheet" href="base.css"> 
         <link rel="stylesheet" href="medium.css"> 
         <link rel="stylesheet" href="large.css"> 
+        <script type="text/javascript" src="elapsedtime.js" defer></script>
         <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@600&family=Red+Hat+Mono&display=swap" rel="stylesheet">
@@ -85,28 +86,9 @@
                                            + document.lastModified
                                            + '</i></small>');
                         </script>
-                        <button onclick="start()">Start</button>
-
-                        <button onclick="end()">End</button>
-                        <script>
-var startTime, endTime;
-
-function start() {
-  startTime = performance.now();
-};
-
-function end() {
-  endTime = performance.now();
-  var timeDiff = endTime - startTime; //in ms 
-  // strip the ms 
-  timeDiff /= 1000; 
-  
-  // get seconds 
-  var seconds = Math.round(timeDiff);
-  document.writeln(seconds + " seconds");
-}
-    </script>
-                        </p></div>
+                        <div class="lastVisitTime"></div>
+               
+                        </div>
             </footer>
         </body>
         </html>
