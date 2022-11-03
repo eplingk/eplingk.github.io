@@ -246,3 +246,35 @@ p{
     max-width: 400px;
     max-height: 200px;
 }
+
+/* form for join page */
+form.form-example {
+  display: table;
+  background-color: lightblue;
+  padding: 5%;
+  margin-top: 5%;
+  margin-bottom: 5%;
+  margin-left: 5%;
+}
+
+div.form-example {
+  display: table-row;
+}
+
+label, input {
+  display: table-cell;
+  margin-bottom: 10px;
+}
+
+label {
+  padding-right: 10px;
+  background-color: lightblue;
+}
+
+
+.thanks{
+  background-color: white;
+  opacity: .7;
+  align-items: center;
+  margin: 5%;
+}
