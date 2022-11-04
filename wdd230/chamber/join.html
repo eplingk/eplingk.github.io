@@ -55,52 +55,66 @@
 </header>
 
 <body>
-<form action="thankyou.html" method="get" class="form-example">
-    <div class="form-example">
+<form action="thankyou.html" method="get" class="form">
+    <div class="form">
       <label for="name">Last name: </label>
-      <input type="text" name="name" id="name" required>
+      <input type="text" name="name" id="Fname" required>
     </div>
-    <div class="form-example">
-      <label for="email">First name: </label>
-      <input type="email" name="email" id="email" required>
+    <div class="form">
+      <label for="name">First name: </label>
+      <input type="text" name="name" id="Lname" required>
     </div>
-    <div class="form-example">
+    <div class="form">
         <label for="email">Valid email: </label>
-        <input type="email" name="email" id="email" required>
+        <input type="email" name="email" id="email" placeholder="yourname@email.com" required>
       </div>
-      <div class="form-example">
-        <label for="email">Phone number: </label>
-        <input type="email" name="email" id="email" required>
+      <div class="form">
+        <label for="number">Phone number: </label>
+        <input type="tel" id="phone" name="phone"
+       pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" placeholder="123-450-6789" required>
       </div>
-      <div class="form-example">
-        <label for="email">Business name: </label>
-        <input type="email" name="email" id="email" required>
+      <div class="form">
+        <label for="business">Business name: </label>
+        <input type="text" name="Bname" id="Bname" required>
       </div>
-      <div class="form-example">
-        <label for="email">Business position: </label>
-        <input type="email" name="email" id="email" required>
+      <div class="form">
+        <label for="title">Business position/title: </label>
+        <input type="text" name="Btitle" id="Btitle" pattern="[a-zA-Z,0-9 -]" maxlength = "7">
+     
       </div>
-      <div class="form-example">
-        <label for="email">Describe your business: </label>
-        <input type="email" name="email" id="email" required>
+      <div class="form">
+        <label for="description">Describe your business: </label>
+        <input type="text" name="des" id="des" required>
       </div>
-      <label for="cars">Choose a membership:</label>
-  <select id="cars" name="cars" size="3">
-    <option value="volvo">  NP Membership  </option>
-    <option value="saab">  Bronze Membership  </option>
-    <option value="fiat">  Silver Membership  </option>
-    <option value="audi">  Gold Membership  </option>
+      <label for="membership">Choose a membership:</label>
+  <select id="membership" name="membership" size="1">
+    <option value="NP">  NP Membership  </option>
+    <option value="BM">  Bronze Membership  </option>
+    <option value="SM">  Silver Membership  </option>
+    <option value="GM">  Gold Membership  </option>
   </select><br><br>
   <div>
+    <input type="hidden" id="dayAndTime" name="dayAndTime" value="CurrentDate">
+    <script>
+      
+  var day = d.getDate();
+  var month = d.getMonth() + 1; 
+  var year = d.getFullYear();
+
+  document.getElementById("date").value = day + "/" + month + "/" + year;
+    </script>
+    
     <p>The fees and membership benefits are as follows:</p><br>
     <li><b>NP (non-profit) Membership</b> is a free membership with the basics provided (free marketing & business classes) </li>
     <li><b>Bronze Membership</b> $1 monthly fee for the basics plus being paired with a mentor</li>
     <li><b>Silver Membership</b> $3 monthly fee for the basics, mentorship and free mentions of your business from our marketing team</li>
     <li><b>Gold Membership</b> $5 montly fee bor the basics, mentorship, free mentions of your business and 30% discount of products from other local businesses</li>
   </div>
-    <div class="form-example">
+    <div class="form">
       <input type="submit" value="Submit">
     </div>
+
+    
   </form>
   </body>
 
