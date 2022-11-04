@@ -255,6 +255,7 @@ form.form {
   margin-top: 5%;
   margin-bottom: 5%;
   margin-left: 5%;
+  box-shadow: 10px 5px 5px black;
 }
 
 div.form {
