@@ -1,0 +1,82 @@
+@import url("https://fonts.googleapis.com/css2?family=Kanit:wght@600&family=Red+Hat+Mono&display=swap");
+body {
+  font-size: 16px;
+  font-family:  'Red Hat Mono', monospace;
+}
+
+header,
+main,
+footer {
+  margin: 1rem;
+  position: relative;
+}
+
+h1 {
+  color: blue;
+  border-bottom: 1px solid gray;
+  text-shadow: 0 0 15px black;
+  width: 100%;
+  text-align: center;
+  font-family: 'Kanit', sans-serif;
+}
+
+h2 {
+  color: blue;
+  margin: 0;
+  font-family: 'Kanit', sans-serif;
+}
+
+h3 {
+  margin: 0;
+  font-size: large;
+}
+
+h4 {
+  color: black;
+  margin: 7px 0 5px 0;
+}
+
+p {
+  margin: 0;
+}
+
+main {
+  margin-left: 2rem;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+}
+
+
+section {
+  margin: 0.25rem;
+  padding: 0.40rem;
+  background-color: lightgray;
+  border: 1px solid black;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+section > p {
+  min-height: 60px;
+}
+
+img {
+  width: auto;
+	max-width: 325px;
+  box-shadow: 0 0 15px gray;
+  height: 200px;
+  border: 1px solid black;
+}
+
+
+footer {
+  border-top: 1px solid gray;
+  padding: 20px;
+  text-align: center;
+}
+
+
+
