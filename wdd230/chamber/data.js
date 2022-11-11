@@ -12,25 +12,32 @@ fetch(requestURL)  //feed the required arguments, the URL
 
 function displayBusinesses(business) {
     let card = document.createElement('section');
-    let h2 = document.createElement('h2');
+    let h1 = document.createElement('h1');
+    let h2 = document.createElement('h2')
+    let bAddress = document.createElement('h3');
+    let bUrl = document.createElement('h4')
+    let bMembership = document.createElement('h4');
     let portrait = document.createElement('img');
-    let bDate = document.createElement('h3');
-    let bPlace = document.createElement('h4');
 
 
     //change the textContent property of the h2 element to contain prophet's full name
     // h2.textContent = prophet.name + ' ' + prophet.lastname;
-    h2.textContent = `${business.name}`;
-    bDate.textContent = `${business.type}`;
-    bPlace.textContent = `Website URL: ${business.websiteurl}`;
+    h1.textContent = `${business.name}`;
+    h2.textContent = `${business.type}`;
+    bAddress.textContent = `${business.number}`;
+    bPlace.textContent = `${business.address}`;
+    bUrl = `${business.websiteurl}`;
+    bMembership = `${business.membership}`;
     portrait.setAttribute('src', business.imageurl);
-    portrait.setAttribute('alt', `Portrait of ${business.name} ${business.lastName} - ${business.order}th Latter-Day Prophet`);
+    
     portrait.setAttribute('loading', 'lazy');
 
+    card.appendChild(h1);
     card.appendChild(h2);
     card.appendChild(portrait);
-    card.appendChild(bDate);
-    card.appendChild(bPlace);
+    card.appendChild(bAddress);
+    card.appendChild(bUrl);
+    card.appendChild(bMembership);
     card.appendChild(portrait);
 
     document.querySelector('div.cards').appendChild(card);

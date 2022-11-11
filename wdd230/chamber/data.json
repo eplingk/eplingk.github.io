@@ -2,8 +2,8 @@
     "businesses": [  
       {
         "name": "Amber and Ivory Boutique",
-        "birthdate": "womens apparel",
-        "birthplace": "3160 E 17th Street #150 Idaho Falls ID 83406", 
+        "type": "womens apparel",
+        "address": "3160 E 17th Street #150 Idaho Falls ID 83406", 
         "membershiplevel": "NP Membership",
         "order": 1,
         "length": 14,
