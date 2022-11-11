@@ -1,11 +1,12 @@
 {
-    "prophets": [
+    "businesses": [  
       {
         "name": "Amber and Ivory Boutique",
-        "type": "womens apparel",
-        "address": "3160 E 17th Street #150 Idaho Falls ID 83406", 
+        "birthdate": "womens apparel",
+        "birthplace": "3160 E 17th Street #150 Idaho Falls ID 83406", 
         "membershiplevel": "NP Membership",
         "order": 1,
+        "length": 14,
         "number": "(208) 403-5432",
         "websiteurl": "https://www.amberandivory.com/",
         "imageurl": "https://theboutiquehub.com/wp-content/uploads/pmpro-register-helper/amberandivory/DSC_3968.jpg-resized.jpg"
@@ -16,6 +17,7 @@
         "address": "1610 E 17th Street Idaho Falls ID 83404",
         "membershiplevel": "Gold Membership",
         "order": 2,
+        "length": 14,
         "number": "(208) 523-0652",
         "websiteurl": "http://blackbeardiner.com/",
         "imageurl": "https://cdn.statically.io/img/bbdimagecdn.blob.core.windows.net/storeimages/store-image-DEFAULT.jpg?DEF"
@@ -26,6 +28,7 @@
         "address": "1000 Riverwalk Dr Ste 100 Idaho Falls ID 83402",
         "membershiplevel": "Silver Membership",
         "order": 3,
+        "length": 14,
         "number": "(208) 523-0862",
         "websiteurl": "http://www.coopernorman.com/",
         "imageurl": "https://cdn.corporatefinanceinstitute.com/assets/accounting.jpeg"
@@ -36,6 +39,7 @@
         "address": "501 W. 17th Street Idaho Falls ID 83402",
         "membershiplevel": "Silver Membership",
         "order": 4,
+        "length": 14,
         "number": "(208) 522-3771",
         "websiteurl": "http://www.danscollisionrepair.com/",
         "imageurl": "https://cdn-daboe.nitrocdn.com/LurOZFXabQPOFRMEeCPPeiiZlCiCkKLZ/assets/static/optimized/rev-4d1f038/wp-content/uploads/shutterstock_321111407-768x512.jpg"
@@ -46,6 +50,7 @@
         "address": "332 Pinon Drive Idaho Falls ID 83402",
         "membershiplevel": "Bronze Membership",
         "order": 5,
+        "length": 14,
         "number": "(208) 521-2730",
         "websiteurl": "http://ensocreative.net/",
         "imageurl": "https://chambermaster.blob.core.windows.net/images/customers/786/members/8672/photos/GALLERY_MAIN/240664107_516264482997723_4843926791776814692_n.jpg"
@@ -56,6 +61,7 @@
         "address": "2026 E 17th Street Idaho Falls Idaho 83404",
         "membershiplevel": "NP Membership",
         "order": 6,
+        "length": 14,
         "number": "(208) 932-1051",
         "websiteurl": "http://www.fitzgeraldsbicycles.com/",
         "imageurl": "https://images.squarespace-cdn.com/content/v1/5c78453065a707ccae3258f8/1615137213722-NA0V6XL5N1PNFVTTRROQ/image-asset.jpeg?format=750w"
@@ -66,6 +72,7 @@
         "address": "2363 Eagle Drive Idaho Falls ID 83406",
         "membershiplevel": "Gold Membership",
         "order": 7,
+        "length": 14,
         "number": "(208) 524-4653",
         "websiteurl": "http://www.facebook.com/GoldsIdahoFalls",
         "imageurl": "https://scontent-sea1-1.xx.fbcdn.net/v/t39.30808-6/313412382_509116104562738_3060720353552005398_n.jpg?stp=dst-jpg_p843x403&_nc_cat=109&ccb=1-7&_nc_sid=730e14&_nc_ohc=APRwuYUD9ngAX9BSkyy&_nc_ht=scontent-sea1-1.xx&oh=00_AfDe50eGXUJIW8kdcG21WWPtAA-RiQVfAtIM57YPgtlr3A&oe=63733460"
@@ -76,6 +83,7 @@
         "address": "520 Park Ave. Idaho Falls ID 83402",
         "membershiplevel": "Silver Membership",
         "order": 8,
+        "length": 14,
         "number": "(208) 523-0862",
         "websiteurl": "http://www.idahofallsmagazine.com/",
         "imageurl": "https://content.cdntwrk.com/files/aT0xNDgyOTUzJnA9MSZ2ZXJzaW9uPTEmY21kPXYmc2lnPTVjZjE0ODA4NjU1MGQ2MDY1MjZlMGU2NWMwNmJhYTEz/-h-128.jpg"
@@ -86,6 +94,7 @@
         "address": "131 E. Main St. Rexburg Idaho 83442",
         "membershiplevel": "Gold Membership",
         "order": 9,
+        "length": 14,
         "number": "(208) 360-0401",
         "websiteurl": "https://www.idahoagents.com/idaho-falls-real-estate/",
         "imageurl": "https://assets.entrepreneur.com/content/3x2/2000/20150622231001-for-sale-real-estate-home-house.jpeg"
