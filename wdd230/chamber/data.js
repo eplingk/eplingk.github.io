@@ -1,16 +1,16 @@
 const requestURL = 'https://eplingk.github.io/wdd230/chamber/data.json';
 const cards = document.querySelector('.cards');
 
-fetch(requestURL)  //feed the required arguments, the URL 
+fetch(requestURL)  
     .then(function (response) {
         return response.json();
     })
     .then(function (jsonObject) {
-        const businesses = jsonObject['businesses'];
-        businesses.forEach(displayBusinesses);
+        const business = jsonObject['business'];
+        business.forEach(displayBusiness);
     });
 
-function displayBusinesses(business) {
+function displayBusiness(business) {
     let card = document.createElement('section');
     let h1 = document.createElement('h1');
     let h2 = document.createElement('h2')
@@ -20,14 +20,13 @@ function displayBusinesses(business) {
     let portrait = document.createElement('img');
 
 
-    //change the textContent property of the h2 element to contain prophet's full name
-    // h2.textContent = prophet.name + ' ' + prophet.lastname;
-    h1.textContent = `${business.name}`;
-    h2.textContent = `${business.type}`;
-    bAddress.textContent = `${business.number}`;
-    bPlace.textContent = `${business.address}`;
-    bUrl = `${business.websiteurl}`;
-    bMembership = `${business.membership}`;
+ 
+    h1.textContent = `Name: ${business.name}`;
+    h2.textContent = ` Type: ${business.type}`;
+    bAddress.textContent = `Phone Number: ${business.number}`;
+    bPlace.textContent = `Address: ${business.address}`;
+    bUrl = `Website URL: ${business.websiteurl}`;
+    bMembership = `Membership Level: ${business.membership}`;
     portrait.setAttribute('src', business.imageurl);
     
     portrait.setAttribute('loading', 'lazy');
