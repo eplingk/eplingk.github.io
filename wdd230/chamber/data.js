@@ -7,7 +7,7 @@ fetch(requestURL)  //feed the required arguments, the URL
     })
     .then(function (jsonObject) {
         const prophets = jsonObject['prophets'];
-        prophets.forEach(displayProphets);
+        prophets.forEach(displayBusinesses);
     });
 
 function displayProphets(prophet) {
@@ -20,11 +20,11 @@ function displayProphets(prophet) {
 
     //change the textContent property of the h2 element to contain prophet's full name
     // h2.textContent = prophet.name + ' ' + prophet.lastname;
-    h2.textContent = `${prophet.name} ${prophet.lastname}`;
-    bDate.textContent = `Date of Birth: ${prophet.birthdate}`;
-    bPlace.textContent = `Place of Birth: ${prophet.birthplace}`;
+    h2.textContent = `${prophet.name}`;
+    bDate.textContent = `${prophet.type}`;
+    bPlace.textContent = `Website URL: ${prophet.websiteurl}`;
     portrait.setAttribute('src', prophet.imageurl);
-    portrait.setAttribute('alt', `Portrait of ${prophet.name} ${prophet.lastName} - ${prophet.order}th Latter-Day Prophet`);
+    portrait.setAttribute('alt', `Portrait of ${prophet.name} - ${prophet.order}`);
     portrait.setAttribute('loading', 'lazy');
 
     card.appendChild(h2);
