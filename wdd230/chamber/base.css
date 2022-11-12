@@ -303,7 +303,7 @@ section > p {
 
 }
 
-img:not(.logo):not(.icon):not(.iconT):not(.iconF){
+img:not(.logo):not(.icon):not(.iconT):not(.iconF):not(.wImage){
   max-width: 120px;
   max-height: 150px;
   margin: 2%;
