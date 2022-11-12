@@ -29,7 +29,7 @@ function displayBusiness(business) {
     bUrl.textContent = `Website URL: ${business.websiteurl}`;
     bMembership.textContent = `Membership Level: ${business.membershiplevel}`;
 
-    bUrl.setAttribute('href', '${business.websiteurl}');
+    bUrl.setAttribute('href', business.websiteurl);
     portrait.setAttribute('src', business.imageurl);
     portrait.setAttribute('loading', 'lazy');
 
