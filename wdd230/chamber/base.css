@@ -25,7 +25,6 @@ h1{
 }
 h2{
   font-family:'Kanit', sans-serif;
-  color: #0e2431;
 }
 .date{
   display: flex;
@@ -301,5 +300,11 @@ section {
 }
 section > p {
   min-height: 60px;
+
 }
 
+img:not(.logo):not(.icon):not(.iconT):not(.iconF){
+  max-width: 120px;
+  max-height: 150px;
+  margin: 2%;
+}

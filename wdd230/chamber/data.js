@@ -12,23 +12,25 @@ fetch(requestURL)
 
 function displayBusiness(business) {
     let card = document.createElement('section');
-    let h1 = document.createElement('h1');
-    let h2 = document.createElement('h2')
-    let bAddress = document.createElement('h3');
-    let bUrl = document.createElement('h4')
-    let bMembership = document.createElement('h4');
+    let h1 = document.createElement('h2');
+    let h2 = document.createElement('h3')
+    let bAddress = document.createElement('h4');
+    let bPhone = document.createElement('h4')
+    let bUrl = document.createElement('a')
+    let bMembership = document.createElement('h5');
     let portrait = document.createElement('img');
 
 
  
-    h1.textContent = `Name: ${business.name}`;
-    h2.textContent = ` Type: ${business.type}`;
-    bAddress.textContent = `Phone Number: ${business.number}`;
-    bPlace.textContent = `Address: ${business.address}`;
-    bUrl = `Website URL: ${business.websiteurl}`;
-    bMembership = `Membership Level: ${business.membership}`;
+    h1.textContent = `${business.name}`;
+    h2.textContent = `${business.type}`;
+    bPhone.textContent = `${business.number}`;
+    bAddress.textContent = `${business.address}`;
+    bUrl.textContent = `Website URL: ${business.websiteurl}`;
+    bMembership.textContent = `Membership Level: ${business.membershiplevel}`;
+
+    bUrl.setAttribute('href', '${business.websiteurl}');
     portrait.setAttribute('src', business.imageurl);
-    
     portrait.setAttribute('loading', 'lazy');
 
     card.appendChild(h1);
