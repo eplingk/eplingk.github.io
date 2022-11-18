@@ -6,6 +6,7 @@
         <title>Chamber of Commerce</title>
         <script type="text/javascript" src="scripts.js" defer></script>
         <script type="text/javascript" src="windchill.js" defer></script>
+        <script type="text/javascript" src="weather.js" defer></script>
         <link rel="stylesheet" href="base.css"> 
         <link rel="stylesheet" href="medium.css"> 
         <link rel="stylesheet" href="large.css"> 
@@ -136,42 +137,107 @@ datefieldUK.innerHTML = `${fulldateUK}`;
      <div class="grid"> 
 
       <div class="callToAction">
-        <h2>Welcome to Idaho Falls</h2>
+        <h2><b>Welcome to Idaho Falls</b></h2>
         <picture>
-          <source class="largeImage" srcset="https://eplingk.github.io/wdd230/chamber/wdd230-org.jpg" media="(min-width:400px) and (max-width:300px)">
+          <!-- <source class="largeImage" srcset="https://eplingk.github.io/wdd230/chamber/wdd230-org.jpg" media="(min-width:400px) and (max-width:300px)">
           <source class="medImage" srcset="https://eplingk.github.io/wdd230/chamber/MEDIUM%20image.jpg" media="(min-width:300px) and (max-width:200px)">
-          <source class="smllImage" srcset="https://eplingk.github.io/wdd230/chamber/SMALL%20Image.jpg" media="(min-width:200px) and (max-width:100px)">
-              <img class="wImage" src="https://eplingk.github.io/wdd230/chamber/wdd230-org.jpg" width="600" height="400" >
+          <source class="smllImage" srcset="https://eplingk.github.io/wdd230/chamber/SMALL%20Image.jpg" media="(min-width:200px) and (max-width:100px)"> -->
+              <img class="wImage" src="http://unitedautosif.com/wp-content/uploads/2019/06/IMG_6296-1024x683.jpg" width="800" height="500" >
               </picture>
               <div class="Jbutton"><a href="join.html">Join the Commerce</a></div>
                   </div>
-      <div class="event"><p>---EVENT---</p>
-      <div class="box"><p>UP NEXT ON OUR CALENDAR:</p><br><p>Oct 29th: buisness TRUNKorTREAT</p><br><p>come support local business and take their candy!</p></div>
+      <div class="event">
+      <div class="box"><p>UP NEXT ON OUR CALENDAR:</p><br><p>Dec 20th: Secret Santa Business</p><br><p>Support a random local business, and another will support yours!</p></div>
       </div>
-      <div class="weather"><P>The&nbsp;Weather: </P><br>
-        <p class="theSun">\    |    /  </p><br>
-        <p class="theSun">---  O   ---    </p><br>
-        <p class="theSun">/    |    \</p><br>
-        
-        
-          <div class="forecast">
-            <span><i class="fa-solid fa-cloud-sun"></i></span>
-            <span class="temp-in-f">32</span><span>&#8457;</span>
-          </div>
-          <p class="coverage">Partly Cloudy</p>
-          <div class="wind-speed">
-            <span>Wind Speed: </span><span class="speed">12</span>
-          </div>
-          <div class="wind-chill">
-            <span>Wind Chill: </span><span class="chill"></span>
-          </div>
+      <div class="weather">
+        <p>Current temperature: <span id="current-temp"></span> &deg;F</p>
+        <figure>
+          <img src="" alt="" id="weather-icon" />
+          <figcaption></figcaption>
+        </figure>
+        <p>wind-speed: <span id="wind-speed"></span></p><br>
+        <p>wind-chill: <span id="wind-chill"></span></p>
 
-      
+
+        <script>
+          const APPID = "0570247ac33ba42aae0b5a1480a6378c";
+
+const currentTemp = document.querySelector('#current-temp');
+const weatherIcon = document.querySelector('#weather-icon');
+const captionDesc = document.querySelector('figcaption');
+const cityName = document.querySelector('#city-name');
+const humidity = document.querySelector("#humidity");
+const pressure = document.querySelector("#pressure");
+const windSpeed = document.querySelector("#wind-speed");
+const windChill = document.querySelector("#wind-chill");
+const windDirection = document.querySelector("#wind-direction")
+
+const url = "https://api.openweathermap.org/data/2.5/weather?zip=97060&appid=4d9f17ef42374d8bec405fcc33edb96a&units=imperial"
+
+async function apiFetch() {
+  try {
+    const response = await fetch(url);
+    if (response.ok) {
+      const data = await response.json();
+      console.log(data); // this is for testing the call
+      displayResults(data);
+    } else {
+        throw Error(await response.text());
+    }
+  } catch (error) {
+      console.log(error);
+  }
+}
+
+function capitalize(str) {
+  const arr = str.split(" ");
+  for (let i = 0; i < arr.length; i++) {
+    arr[i] = arr[i].charAt(0).toUpperCase() + arr[i].slice(1);
+  }
+  const str2 = arr.join(" ");
+  return str2;
+}
+
+function degToCompass(num) {
+
+  const arrayOfDirectionCodes = ["N", "NNE", "NE", "ENE", "E", "ESE", "SE", "SSE", "S", "SSW", "SW", "WSW", "W", "WNW", "NW", "NNW"];
+  let val = Math.floor((num / 22.5) + 0.5);
+  return arrayOfDirectionCodes[(val % 16)];
+}
+
+function convertMillibarsToInchesOfMercury(num) {
+  return num * 0.030;
+}
+
+function displayResults(weatherData) {
+  currentTemp.innerHTML = `<strong>${weatherData.main.temp.toFixed(0)}</strong>`;
+  windSpeed.innerHTML = `${weatherData.main.speed}`;
+  windChill.innerHTML = `${weatherData.main.deg}`;
+
+  const iconsrc = `https://openweathermap.org/img/w/${weatherData.weather[0].icon}.png`;
+  const desc = weatherData.weather[0].description;
+
+  weatherIcon.setAttribute('src', iconsrc);
+  weatherIcon.setAttribute('alt', desc);
+  captionDesc.textContent = capitalize(desc);
+  cityName.textContent = weatherData.name;
+  humidity.textContent = weatherData.main.humidity;
+  pressure.textContent = convertMillibarsToInchesOfMercury(weatherData.main.pressure).toFixed(1);
+  windSpeed.textContent = weatherData.wind.speed.toFixed(0);
+  windChill.textContent = weatherData.main.feels_like.toFixed(0);
+  windDirection.textContent = degToCompass(weatherData.wind.deg)
+}
+
+apiFetch();
+
+
+        </script>
+        
       
     </div>
-      <div class="join"><p>JoIn Us PlEaSe</p>
+      <div class="join">
         <div class="Jbutton"><a href="join.html">Join the Commerce</a></div></div>
-      <div class="newsRelease"><p>!!!NEWS!!!</p><br>
+      <div class="newsRelease"><h2>!!!NEWS!!!</h2><br>
       <p>See the latest on COVID-19: </p><a href="https://pandemicpatients.org/?gclid=Cj0KCQjwqc6aBhC4ARIsAN06NmPb9JDeGUE54NmqCGdHA5HPZjWSpX-1196SXGDNQpmmEMaMiadN-J0aAmLCEALw_wcB">Click Here</a></div>
       <div class="sLight">
         <div class="sLightOne">
@@ -191,7 +257,7 @@ datefieldUK.innerHTML = `${fulldateUK}`;
 
         <div class="sLight3">
           <h2> Spotlight </h2>
-          <p>Idaho Falls Chamber of Commerce celebrates 20 years of growing local businesses.</p>
+          <p><br><br><br>Idaho Falls Chamber of Commerce celebrates 20 years of growing local businesses.</p>
         </div>
       </div>
 
@@ -213,7 +279,7 @@ datefieldUK.innerHTML = `${fulldateUK}`;
                     <div class="footer" id="lastModified">
                     <script class="footer">
                         if (Date.parse(document.lastModified) != 0)
-                            document.write('<p><b>©2022 IF Chamber of Commerce | Katie Epling | WDD 230 Project | Last Modification: '
+                            document.write('<p><b>©2022 IF Chamber of Commerce | Katie Epling | WDD 230 Project |Weather info provided by: OpenWeather API| Last Modification: '
                                            + document.lastModified
                                            + '</i></small>');
                         </script>

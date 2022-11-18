@@ -50,8 +50,8 @@ function convertMillibarsToInchesOfMercury(num) {
 function displayResults(weatherData) {
   currentTemp.innerHTML = `<strong>${weatherData.main.temp.toFixed(0)}</strong>`;
   windSpeed.innerHTML = `${weatherData.main.speed}`;
-  windChill.innerHTML = `${weatherData.main.deg}`;
-
+  windChill.innerHTML = `${weatherData.main.feels_like}`;
+   
   const iconsrc = `https://openweathermap.org/img/w/${weatherData.weather[0].icon}.png`;
   const desc = weatherData.weather[0].description;
 

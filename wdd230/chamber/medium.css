@@ -17,7 +17,6 @@
     display: flex;
     text-align: center;
     flex-wrap: wrap;
-    background-color: beige;
   }
   .callToAction{
     display: flex;
