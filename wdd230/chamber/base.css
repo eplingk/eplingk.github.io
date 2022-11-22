@@ -51,10 +51,10 @@ p{
 
 
 
-.grid{
+/* .grid{
   background-color: beige;
   
-}
+} */
 
 .Jbutton{
   font-family:'Kanit', sans-serif;
@@ -303,8 +303,46 @@ section > p {
 
 }
 
-img:not(.logo):not(.icon):not(.iconT):not(.iconF):not(.wImage){
+img:not(.logo):not(.icon):not(.iconT):not(.iconF):not(.wImage):not(.lOne):not(.lTwo):not(.lThree):not(.lFour):not(.lFive){
   max-width: 120px;
   max-height: 150px;
   margin: 2%;
+}
+
+.newsRelease{
+  background-image: url("https://cdn.who.int/media/images/default-source/mca/mca-covid-19/coronavirus-2.tmb-1920v.jpg?sfvrsn=4dba955c_12");
+  background-repeat: no-repeat;
+  margin-left: 200px;
+  align-items: center;
+  color: white;
+  padding-right: 100px;
+}
+.newsRelease a{
+  color: white;
+  font-weight: 300;
+}
+
+
+.callToAction h2{
+  text-shadow: 2px 2px 8px white;
+  margin-top: 25%;
+}
+
+.sLight{
+  background-color: beige;
+}
+.weather{
+  background-color: #0AE2FF;
+}
+h1{
+  font-size: large;
+}
+
+.table {
+  background-color: lightgray;
+  margin-left:40%;
+  margin-bottom: 2%;
+}
+.month{
+  text-shadow: 2px 2px 8px white;
 }

@@ -7,7 +7,7 @@
   
 
   h1{
-   
+   font-size: larger;
    padding-right: 20%;
   }
 
@@ -116,25 +116,37 @@ a{
     grid-row: 1 / span 2 !important;
     min-height: 500px;
     min-width: 800px;
-    padding: 100px;
-      
-      
+    padding: 100px;    
   }
+.callToAction h2{
+    margin-top: 1% !important;
+}
+
 
   .newsRelease {
       grid-column: 2 / span 3 !important;
-      grid-row: 3 !important;
-      
-      
-      
+      grid-row: 3 !important;        
   }
+  .newsRelease a{
+    color: white;
+    margin-right: 300px;
+    font-weight: 300;
+  }
+  .newsRelease h2{
+    margin-right: 300px;
+  }
+  .newsRelease p{
+    margin-right: 300px;
+  }
+  
+
 
   .sLight {
       grid-column: 4 !important;
       grid-row: 1 / span 3 !important;
       display: inline !important;
-      margin-left: 50px;
-      padding: 30px;
+      margin-bottom: 250px;
+      background-color: beige;
       
       
       
@@ -142,10 +154,11 @@ a{
   .sLight3 {
    display: flex;
    flex-direction:row;
-   margin-left: 50px;
-   padding: 30px;
+   padding: 30%;
   }
-
+.sLightDiv{
+    padding: 5%;
+}
  
 
 .wImage{
@@ -213,3 +226,5 @@ a{
 .lFive:hover{
     height: 500px;
 }
+
+
