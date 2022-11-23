@@ -346,3 +346,8 @@ h1{
 .month{
   text-shadow: 2px 2px 8px white;
 }
+.contact{
+  background-color: #0e2431;
+  color: white;
+  border-radius: 15%;
+}
