@@ -6,15 +6,19 @@
    }
   
 
+
   h1{
    font-size: 30px;
-   padding-right: 20%;
+   padding-right: 10%;
+   
   }
 
+ 
+
   a:hover{
-   color:#0AE2FF;
-   font-style:underline;
+   color:rgb(15, 115, 209);
   }
+
 
   .iconF{
    padding-left: 3%;
@@ -38,7 +42,7 @@
    text-decoration: none;
    display: flex;
    flex-direction: row;
-   background-color: #8B928F;
+   background-color: lightgray;
    font-family: 'kanit', sans-serif;
    font-size: large;
    justify-content: space-between;
@@ -61,6 +65,7 @@ a{
 
 .active{
    padding-left: 5%;
+   margin-top: 10px;
    
 }
 
@@ -95,7 +100,7 @@ a{
   .weather {
       grid-column: 1 !important;
       grid-row: 2 !important;
-      background-color: #0AE2FF;
+      background-color: lightblue;
       margin-left: 180px;
       margin-bottom: 100px;
       /* padding: 10%; */
@@ -169,7 +174,9 @@ a{
 }
 
 .discoverGallery{
-    background-color: beige;  
+    background-color: lightblue; 
+    margin-left: 30%;
+    margin-right: 30%;
     float: left;  
 }
 
@@ -227,4 +234,6 @@ a{
     height: 500px;
 }
 
-
+a:active{
+    color: hotpink;
+  }
