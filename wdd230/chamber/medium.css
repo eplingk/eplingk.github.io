@@ -11,7 +11,13 @@
   .sLight3{
     display: none;
   }
- 
+
+
+h1{
+  font-size: 1.5em;
+  margin-right: 170px;
+}
+
   .grid{
     
     display: flex;

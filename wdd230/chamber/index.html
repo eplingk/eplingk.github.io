@@ -7,6 +7,7 @@
         <script type="text/javascript" src="scripts.js" defer></script>
         <script type="text/javascript" src="windchill.js" defer></script>
         <script type="text/javascript" src="weather.js" defer></script>
+        <script type="text/javascript" src="banner.js" defer></script>
         <link rel="stylesheet" href="base.css"> 
         <link rel="stylesheet" href="medium.css"> 
         <link rel="stylesheet" href="large.css"> 
@@ -81,67 +82,15 @@ datefieldUK.innerHTML = `${fulldateUK}`;
 
         </header>
 <body>
-     <div class="banner">
-      <script class="banner">
-        
-
-        var now  = new Date();       
-      var hrs  = now.getHours();    
-      var mins = now.getMinutes();
-      var secs = now.getSeconds();
+  <div class="banner"></div>
     
-    
-    var weekday = new Array(7);
-  weekday[0]=  "Sunday";
-  weekday[1] = "Monday";
-  weekday[2] = "Tuesday";
-  weekday[3] = "Wednesday";
-  weekday[4] = "Thursday";
-  weekday[5] = "Friday";
-  weekday[6] = "Saturday";
-  var day = weekday[now.getDay()];
-    
-      
-    if (day == "Monday") {
-        document.getElementsByClassName("banner") = "<h2>🤝🏼 Come join us for the chamber meet and greet Wednesday at 7:00 p.m.</h2>";
-        document.getElementsByClassName("banner").style.backgroundColor = "white";
-        document.getElementsByClassName("banner").style.opacity = "0.8";
-        document.getElementsByClassName("banner").style.borderColor = "#0e2431";
-        document.getElementsByClassName("banner").style.border = "dashed";
-        document.getElementsByClassName("banner").style.padding = "5%";
-        document.getElementsByClassName("banner").style.marginTop = "5%";
-        document.getElementsByClassName("banner").style.marginLeft = "10%";
-        document.getElementsByClassName("banner").style.marginRight = "10%";
-        document.getElementsByClassName("banner").style.marginBottom = "5%";
-      } 
-    else if (day == "Tuesday"){
-      document.getElementsByClassName("banner") = "<h2>🤝🏼 Come join us for the chamber meet and greet Wednesday at 7:00 p.m.</h2>";
-      document.getElementsByClassName("banner").style.backgroundColor = "white";
-      document.getElementsByClassName("banner").style.opacity = "0.8";
-      document.getElementsByClassName("banner").style.borderColor = "#0e2431";
-      document.getElementsByClassName("banner").style.border = "dashed";
-      document.getElementsByClassName("banner").style.padding = "5%";
-      document.getElementsByClassName("banner").style.marginTop = "5%";
-      document.getElementsByClassName("banner").style.marginLeft = "10%";
-      document.getElementsByClassName("banner").style.marginRight = "10%";
-      document.getElementsByClassName("banner").style.marginBottom = "5%";
-        
-      }
-     else {
-        document.getElementsByClassName("banner").style.display = "none";
-      }
-      </script>
-
-      </div>
      
      <div class="grid"> 
 
       <div class="callToAction">
         <h2><b>Welcome to Idaho Falls</b></h2>
         <picture>
-          <!-- <source class="largeImage" srcset="https://eplingk.github.io/wdd230/chamber/wdd230-org.jpg" media="(min-width:400px) and (max-width:300px)">
-          <source class="medImage" srcset="https://eplingk.github.io/wdd230/chamber/MEDIUM%20image.jpg" media="(min-width:300px) and (max-width:200px)">
-          <source class="smllImage" srcset="https://eplingk.github.io/wdd230/chamber/SMALL%20Image.jpg" media="(min-width:200px) and (max-width:100px)"> -->
+       
               <img class="wImage" src="http://unitedautosif.com/wp-content/uploads/2019/06/IMG_6296-1024x683.jpg" width="800" height="500" >
               </picture>
               <div class="Jbutton"><a href="join.html">Join the Commerce</a></div>
@@ -179,7 +128,7 @@ async function apiFetch() {
     const response = await fetch(url);
     if (response.ok) {
       const data = await response.json();
-      console.log(data); // this is for testing the call
+      console.log(data); 
       displayResults(data);
     } else {
         throw Error(await response.text());
