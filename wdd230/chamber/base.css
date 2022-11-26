@@ -1,4 +1,6 @@
-
+body{
+  overflow-x: hidden;
+}
 .box{
   background-color: white;
   border:black;
@@ -282,11 +284,12 @@ label {
 
 
 
-/* directory css trial */
+
 .cards {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
   margin-top: 5%;
+  
 }
 
 
@@ -331,9 +334,13 @@ img:not(.logo):not(.icon):not(.iconT):not(.iconF):not(.wImage):not(.lOne):not(.l
   
 }
 
-.sLight{
-  background-color: beige;
+
+
+.cardOne{
+  border-width: 2px;
+  border-color: black;
 }
+
 .weather{
   background-color: lightblue;
 }
@@ -356,13 +363,13 @@ h1{
 .contact{
   background-color: lightblue;
   border-radius: 25%;
-  height: 200px;
+  height: 400px;
   width:800px;
   margin:0 auto;
   align-items: center;
   box-shadow: 10px 5px 5px black;
   margin-top: 10%;
-  margin-bottom: 10%;
+  margin-bottom: -10%;
 }
 
 .banner {
@@ -374,4 +381,19 @@ h1{
   width: 60%;
   margin-left: 15%;
   text-align: center;
+}
+
+.red{
+  color: rgb(189, 6, 6);
+}
+
+form.newForm {
+  display: table;
+  background-color: lightblue;
+  border-radius: 25%;
+  padding: 5%;
+  margin-bottom: 5%;
+  margin-left: 45%;
+  box-shadow: 10px 5px 5px black;
+  
 }

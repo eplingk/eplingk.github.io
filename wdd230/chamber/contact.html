@@ -29,6 +29,7 @@
               <h1>Idaho Falls Chamber of Commerce</h1>
             </div>
             <div class="menu-items">
+              <ul>
               <li><a href="index.html">Home</a></li>
               <li><a href="discover.html">Discover</a></li>
               <li><a href="join.html">Membership</a></li>
@@ -36,6 +37,7 @@
               <li><a href="contact.html">Contact</a></li>
               <li><a class="icon" href="https://www.facebook.com/"><img src="https://eplingk.github.io/wdd230/chamber/logo-facebookpng-32204.png" width="20" height="20"></a></li>
               <li><a class="icon" href="https://twitter.com/"><img src="https://eplingk.github.io/wdd230/chamber/logo-twitter-png-5859.png" width="30" height="30"></a></li>
+                </ul>
             </div>
           </div>
         </div>
@@ -62,8 +64,36 @@
    <p> <b>Address:</b> 365 River Pkwy, Idaho Falls, ID 83402</p><br>
    <p> <b>Phone Number:</b> 510-888-9158</p><br>
    <p> <b>Email:</b> ifcocemail@gmail.com</p><br>
+   <p> <b>Office Hours:</b> Mon - Fri 9AM - 5PM</p>
    </div>
-   
+
+   <form action="thanks.html" method="get" class="newForm">
+    <div class="form">
+      <p class="red">*All fields are required*</p><br>
+      <label for="name">Last Name: </label>
+      <input type="text" name="name" id="Fname" required>
+    </div>
+    <div class="form">
+      <label for="name">First name: </label>
+      <input type="text" name="name" id="Lname" required>
+    </div>
+    <div class="form">
+        <label for="email">Valid email: </label>
+        <input type="email" name="email" id="email" placeholder="yourname@email.com" required>
+      </div>
+      <div class="form">
+        <label for="number">Phone number: </label>
+        <input type="tel" id="phone" name="phone"
+       pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" placeholder="123-450-6789" required>
+      </div>
+      <div class="form">
+        <label for="description">Questions/Concerns: </label>
+        <input type="text" name="des" id="des" required>
+      </div>
+      <div class="form">
+        <input type="submit" value="Submit">
+      </div>
+      </form>
 </body>
   
 

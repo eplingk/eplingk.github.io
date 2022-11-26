@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="eng">
+<html lang="en">
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, inital-scale=1.0">
@@ -45,7 +45,7 @@ datefieldUK.innerHTML = `${fulldateUK}`;
         <nav>
             <div class="navbar">
               <div class="container nav-container">
-                  <input class="checkbox" type="checkbox" name="" id="" />
+                  <input class="checkbox" type="checkbox">
                   <div class="hamburger-lines">
                     <span class="line line1"></span>
                     <span class="line line2"></span>
@@ -55,13 +55,15 @@ datefieldUK.innerHTML = `${fulldateUK}`;
                   <h1>Idaho Falls Chamber of Commerce</h1>
                 </div>
                 <div class="menu-items">
+                  <ul>
                   <li><a href="index.html">Home</a></li>
                   <li><a href="discover.html">Discover</a></li>
                   <li><a href="join.html">Membership</a></li>
                   <li><a href="directory.html">Directory</a></li>
                   <li><a href="contact.html">Contact</a></li>
-                  <li><a class="icon" href="https://www.facebook.com/"><img src="https://eplingk.github.io/wdd230/chamber/logo-facebookpng-32204.png" width="20" height="20"></a></li>
-                  <li><a class="icon" href="https://twitter.com/"><img src="https://eplingk.github.io/wdd230/chamber/logo-twitter-png-5859.png" width="30" height="30"></a></li>
+                  <li><a class="icon" href="https://www.facebook.com/"><img src="https://eplingk.github.io/wdd230/chamber/logo-facebookpng-32204.png" alt="facebooklogo" width="20" height="20"></a></li>
+                  <li><a class="icon" href="https://twitter.com/"><img src="https://eplingk.github.io/wdd230/chamber/logo-twitter-png-5859.png" alt="twitterlogo" width="30" height="30"></a></li>
+                    </ul>
                 </div>
               </div>
             </div>
@@ -74,14 +76,15 @@ datefieldUK.innerHTML = `${fulldateUK}`;
                 <li class="active"><a href="join.html">Membership</a></li>
                 <li class="active"><a href="directory.html">Directory</a></li>
                 <li class="active"><a href="contact.html">Contact</a></li>
-                <li class="iconF"><a class="active" href="https://www.facebook.com/"><img src="https://eplingk.github.io/wdd230/chamber/logo-facebookpng-32204.png" width="20" height="20"></a></li>
-                <li class="iconT"><a class="active" href="https://twitter.com/"><img src="https://eplingk.github.io/wdd230/chamber/logo-twitter-png-5859.png" width="30" height="30"></a></li>
+                <li class="iconF"><a class="active" href="https://www.facebook.com/"><img src="https://eplingk.github.io/wdd230/chamber/logo-facebookpng-32204.png" alt="facebooklogo" width="20" height="20"></a></li>
+                <li class="iconT"><a class="active" href="https://twitter.com/"><img src="https://eplingk.github.io/wdd230/chamber/logo-twitter-png-5859.png" alt="twitterlogo" width="30" height="30"></a></li>
             </ul>
             <h1>Idaho Falls Chamber of Commerce</h1>
           </nav>
 
         </header>
 <body>
+  <main>
   <div class="banner"></div>
     
      
@@ -91,7 +94,7 @@ datefieldUK.innerHTML = `${fulldateUK}`;
         <h2><b>Welcome to Idaho Falls</b></h2>
         <picture>
        
-              <img class="wImage" src="http://unitedautosif.com/wp-content/uploads/2019/06/IMG_6296-1024x683.jpg" width="800" height="500" >
+              <img class="wImage" src="http://unitedautosif.com/wp-content/uploads/2019/06/IMG_6296-1024x683.jpg" alt="welcome" width="800" height="500" >
               </picture>
               <div class="Jbutton"><a href="join.html">Join the Commerce</a></div>
                   </div>
@@ -99,22 +102,22 @@ datefieldUK.innerHTML = `${fulldateUK}`;
       <div class="box"><p>UP NEXT ON OUR CALENDAR:</p><br><p>Dec 20th: Secret Santa Business</p><br><p>Support a random local business, and another will support yours!</p></div>
       </div>
       <div class="weather">
-        <p>Current temperature: <span id="current-temp"></span> &deg;F</p>
+        <p>Current temperature:<br> <span id="current-temp"></span> &deg;F</p>
         <figure>
-          <img src="" alt="" id="weather-icon" />
+          <img alt="icon" id="weather-icon" />
           <figcaption></figcaption>
         </figure>
-        <p>wind-speed: <span id="wind-speed"></span></p><br>
-        <p>wind-chill: <span id="wind-chill"></span></p>
+        <p>wind-speed: <br>6 MPR<span id="wind-speed"></span></p><br>
+        <p>wind-chill: <br>42&deg;F <span id="wind-chill"></span></p>
 
 
         <script>
-          const APPID = "0570247ac33ba42aae0b5a1480a6378c";
+          const APPID = "4d9f17ef42374d8bec405fcc33edb96a";
 
+// select HTML elements in the document
 const currentTemp = document.querySelector('#current-temp');
 const weatherIcon = document.querySelector('#weather-icon');
 const captionDesc = document.querySelector('figcaption');
-const cityName = document.querySelector('#city-name');
 const humidity = document.querySelector("#humidity");
 const pressure = document.querySelector("#pressure");
 const windSpeed = document.querySelector("#wind-speed");
@@ -128,7 +131,6 @@ async function apiFetch() {
     const response = await fetch(url);
     if (response.ok) {
       const data = await response.json();
-      console.log(data); 
       displayResults(data);
     } else {
         throw Error(await response.text());
@@ -148,7 +150,10 @@ function capitalize(str) {
 }
 
 function degToCompass(num) {
-
+  // Get direction code from DEG provided by the API
+  // - Divide the angle by 22.5 because 360deg/16 directions
+  // - Add .5 so that when you truncate the value you can break the 'tie' between the change threshold
+  // - Directly index into the array and print the value (mod 16)
   const arrayOfDirectionCodes = ["N", "NNE", "NE", "ENE", "E", "ESE", "SE", "SSE", "S", "SSW", "SW", "WSW", "W", "WNW", "NW", "NNW"];
   let val = Math.floor((num / 22.5) + 0.5);
   return arrayOfDirectionCodes[(val % 16)];
@@ -158,10 +163,18 @@ function convertMillibarsToInchesOfMercury(num) {
   return num * 0.030;
 }
 
+function getWindChill(temp, wind) {
+  if (temp <= 50 && wind >= 3) {
+    let chill = 35.74 + 0.6215 * temp - 35.75 * Math.pow(wind, 0.16) + 0.4275 * temp * Math.pow(wind, 0.16);
+    return Math.round(chill);
+  }
+  else {
+      return "N/A";
+  }
+}
+
 function displayResults(weatherData) {
   currentTemp.innerHTML = `<strong>${weatherData.main.temp.toFixed(0)}</strong>`;
-  windSpeed.innerHTML = `${weatherData.main.speed}`;
-  windChill.innerHTML = `${weatherData.main.deg}`;
 
   const iconsrc = `https://openweathermap.org/img/w/${weatherData.weather[0].icon}.png`;
   const desc = weatherData.weather[0].description;
@@ -169,51 +182,74 @@ function displayResults(weatherData) {
   weatherIcon.setAttribute('src', iconsrc);
   weatherIcon.setAttribute('alt', desc);
   captionDesc.textContent = capitalize(desc);
-  cityName.textContent = weatherData.name;
   humidity.textContent = weatherData.main.humidity;
   pressure.textContent = convertMillibarsToInchesOfMercury(weatherData.main.pressure).toFixed(1);
   windSpeed.textContent = weatherData.wind.speed.toFixed(0);
-  windChill.textContent = weatherData.main.feels_like.toFixed(0);
+  windChill.textContent = getWindChill(weatherData.main.temp.toFixed(0), weatherData.wind.speed);
   windDirection.textContent = degToCompass(weatherData.wind.deg)
 }
 
 apiFetch();
 
 
+
+
         </script>
         
       
     </div>
+    <div class="sLight">
+      <div class="sLightOne">
+        <h2>Spotlight</h2><br>
+        <div>
+              <a href="http://blackbeardiner.com/"><h3>Black Bear Diner</h3></a>
+              <h4>Restaurant</h4>
+              <h4>1610 E 17th Street Idaho Falls ID 83404</h4>
+              <h4>Gold Membership</h4>
+              <img src="https://cdn.statically.io/img/bbdimagecdn.blob.core.windows.net/storeimages/store-image-DEFAULT.jpg?DEF" alt="logo" width="90" height="90">
+
+
+        </div>
+
+      </div>
+      <div class="sLightTwo">
+        
+        <div>
+          <a href="http://www.coopernorman.com/"><h3>Cooper Norman</h3></a>
+          <h4>Accountant</h4>
+          <h4>1000 Riverwalk Dr Ste 100 Idaho Falls ID 83402</h4>
+          <h4>Silver Membership</h4>
+          <img src="https://cdn.corporatefinanceinstitute.com/assets/accounting.jpeg" alt="logo" width="90" height="90">
+
+
+    </div>
+
+      
+
+      <div class="sLight3">
+        <div class="sLightDiv">
+
+          <div>
+            <a href="http://www.danscollisionrepair.com/"><h3>Dan's Collision Repair</h3></a>
+            <h4>Automobile Services</h4>
+            <h4>501 W. 17th Street Idaho Falls ID 83402</h4>
+            <h4>Silver Membership</h4>
+            <img src="https://cdn-daboe.nitrocdn.com/LurOZFXabQPOFRMEeCPPeiiZlCiCkKLZ/assets/static/optimized/rev-4d1f038/wp-content/uploads/shutterstock_321111407-768x512.jpg" alt="logo" width="90" height="90">
+
+
+      </div>
+      </div>
+    </div>
+
+    </div>
+  </div>
       <div class="join">
         <div class="Jbutton"><a href="join.html">JOIN US!</a></div></div>
       <div class="newsRelease"><h2>!!!NEWS!!!</h2><br>
       <p>See the latest on COVID-19: </p><a href="https://pandemicpatients.org/?gclid=Cj0KCQjwqc6aBhC4ARIsAN06NmPb9JDeGUE54NmqCGdHA5HPZjWSpX-1196SXGDNQpmmEMaMiadN-J0aAmLCEALw_wcB">Click Here</a></div>
-      
-      
-      <div class="sLight">
-        <div class="sLightOne">
-          <h2>Spotlight</h2>
-          <p>James Carlton, 75, is the oldest business owner in Idaho.
-            His business having been successful for 32 years!
-          </p>
-
-        </div>
-        <div class="sLightTwo">
-          <h2>Spotlight</h2>
-          <p>High School senior, Callie Termane, tells us about her plan to become 
-            one of our local business owners.
-          </p>
-
-        
-
-        <div class="sLight3">
-          <div class="sLightDiv"><h2> Special Spotlight </h2></div><br>
-          <br><p>Idaho Falls Chamber of Commerce celebrates 20 years of growing local businesses.</p>
-        </div>
       </div>
-
-     </div>  
-    </div>
+      
+      
     
    
     </main>
@@ -223,10 +259,10 @@ apiFetch();
 
             <footer class="footer">
                 <img class= "footerlogo" src="https://raw.githubusercontent.com/eplingk/eplingk.github.io/main/wdd230/chamber/ifcoclogo.webp" alt="logo" width="40" height="40">
-                <p class="footer">Contact us at: 510-888-9158 </br>
+                <p class="footer">Contact us at: 510-888-9158 <br>
                 or ifcocemail@gmail.com</p>
-                <li class="footer" id="map"><a href = "https://www.google.com/maps/place/Idaho+Falls,+ID/@43.4926827,-112.1037469,12z/data=!3m1!4b1!4m5!3m4!1s0x5354594e739512b5:0x2311c9fc094c49c9!8m2!3d43.4926607!4d-112.0407584">Link to our map</a></li>
-                    <main class="footer">
+                
+                <p class="footer" id="map"><a href = "https://www.google.com/maps/place/Idaho+Falls,+ID/@43.4926827,-112.1037469,12z/data=!3m1!4b1!4m5!3m4!1s0x5354594e739512b5:0x2311c9fc094c49c9!8m2!3d43.4926607!4d-112.0407584">Link to our map</a></p>
                     <div class="footer" id="lastModified">
                     <script class="footer">
                         if (Date.parse(document.lastModified) != 0)
@@ -234,7 +270,7 @@ apiFetch();
                                            + document.lastModified
                                            + '</i></small>');
                         </script>
-                        </p></div>
+                        </div>
             </footer>
     </body>
 </html>
