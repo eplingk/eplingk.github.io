@@ -77,8 +77,13 @@ a{
    }
    .footer{
        background-color:lightgray;
-   }
     
+   }
+   
+   .test{
+    max-height: 100px;
+   }
+
    .grid{
       display: grid;
       margin-top: 5%;
