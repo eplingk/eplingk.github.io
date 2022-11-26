@@ -365,8 +365,6 @@ h1{
 .contact{
   background-color: lightblue;
   border-radius: 25%;
-  min-height: 300px;
-  margin:0 auto;
   align-items: center;
   box-shadow: 10px 5px 5px black;
   margin-top: 35%;
@@ -397,7 +395,4 @@ form.newForm {
   margin-left: 45%;
   box-shadow: 10px 5px 5px black;
   
-}
-.discoverGallery{
-background-color: none;
 }
