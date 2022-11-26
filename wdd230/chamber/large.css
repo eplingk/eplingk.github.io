@@ -107,9 +107,9 @@ a{
       grid-column: 1 !important;
       grid-row: 2 !important;
       background-color: lightblue;
-      margin-left: 180px;
+      margin-left: 80px;
       margin-bottom: 100px;
-      /* padding: 10%; */
+      
       
       
   }
@@ -131,6 +131,7 @@ a{
   }
 .callToAction h2{
     margin-top: 1% !important;
+    
 }
 
 
@@ -251,4 +252,8 @@ label {
     display: inline-block;
     width: 150px;
     text-align: right;
+  }
+  .contact{
+    min-height: 500px;
+    min-width: 800px;
   }
