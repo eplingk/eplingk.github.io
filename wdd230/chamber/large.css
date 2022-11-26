@@ -131,7 +131,8 @@ a{
 
   .newsRelease {
       grid-column: 2 / span 3 !important;
-      grid-row: 3 !important;        
+      grid-row: 3 !important; 
+      margin-right: 200px;       
   }
   .newsRelease a{
     color: white;
@@ -151,10 +152,13 @@ a{
       grid-column: 4 !important;
       grid-row: 1 / span 3 !important;
       display: inline !important;
-      margin-bottom: 250px;
-      background-color: gray;
+      margin-bottom: 280px;
+      background-color: lightgray;
       border: black;
       margin-bottom: 300px;
+      text-align: center;
+      padding-left: 100px;
+      
       
       
       
