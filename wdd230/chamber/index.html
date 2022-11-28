@@ -5,6 +5,8 @@
         <meta name="viewport" content="width=device-width, inital-scale=1.0">
         <title>Chamber of Commerce</title>
         <script type="text/javascript" src="scripts.js" defer></script>
+        <script type="text/javascript" src="footer.js" defer></script>
+        <script type="text/javascript" src="date.js" defer></script>
         <script type="text/javascript" src="windchill.js" defer></script>
         <script type="text/javascript" src="weather.js" defer></script>
         <script type="text/javascript" src="banner.js" defer></script>
@@ -17,28 +19,8 @@
 
 </head>
 <header>
-  
-   
-<script class="date">
-  // select the elements to manipulate (output to)
-const datefield = document.querySelector(".date");
-const datefieldUK = document.querySelector("aside"); // for european/family history format with day first.
+  <div id="fulldate"></div>
 
-// derive the current date using a date object
-const today = new Date();
-const fulldate = new Intl.DateTimeFormat("en-US", { dateStyle: "full" }).format(
-	today
-);
-const fulldateUK = new Intl.DateTimeFormat("en-UK", {
-	dateStyle: "full"
-}).format(today);
-// long, medium, short options ... try them
-
-datefield.innerHTML = `${fulldate}`;
-datefieldUK.innerHTML = `${fulldateUK}`;
-
-
-</script>
 
        
         <a href="index.html"><img class= "logo" src="https://raw.githubusercontent.com/eplingk/eplingk.github.io/main/wdd230/chamber/ifcoclogo.webp" alt="logo" width="200" height="200"></a>
@@ -107,94 +89,8 @@ datefieldUK.innerHTML = `${fulldateUK}`;
           <img alt="icon" id="weather-icon" />
           <figcaption></figcaption>
         </figure>
-        <p>wind-speed: <br>6 MPR<span id="wind-speed"></span></p><br>
-        <p>wind-chill: <br>42&deg;F <span id="wind-chill"></span></p>
-
-
-        <script>
-          const APPID = "4d9f17ef42374d8bec405fcc33edb96a";
-
-// select HTML elements in the document
-const currentTemp = document.querySelector('#current-temp');
-const weatherIcon = document.querySelector('#weather-icon');
-const captionDesc = document.querySelector('figcaption');
-const humidity = document.querySelector("#humidity");
-const pressure = document.querySelector("#pressure");
-const windSpeed = document.querySelector("#wind-speed");
-const windChill = document.querySelector("#wind-chill");
-const windDirection = document.querySelector("#wind-direction")
-
-const url = "https://api.openweathermap.org/data/2.5/weather?zip=97060&appid=4d9f17ef42374d8bec405fcc33edb96a&units=imperial"
-
-async function apiFetch() {
-  try {
-    const response = await fetch(url);
-    if (response.ok) {
-      const data = await response.json();
-      displayResults(data);
-    } else {
-        throw Error(await response.text());
-    }
-  } catch (error) {
-      console.log(error);
-  }
-}
-
-function capitalize(str) {
-  const arr = str.split(" ");
-  for (let i = 0; i < arr.length; i++) {
-    arr[i] = arr[i].charAt(0).toUpperCase() + arr[i].slice(1);
-  }
-  const str2 = arr.join(" ");
-  return str2;
-}
-
-function degToCompass(num) {
-  // Get direction code from DEG provided by the API
-  // - Divide the angle by 22.5 because 360deg/16 directions
-  // - Add .5 so that when you truncate the value you can break the 'tie' between the change threshold
-  // - Directly index into the array and print the value (mod 16)
-  const arrayOfDirectionCodes = ["N", "NNE", "NE", "ENE", "E", "ESE", "SE", "SSE", "S", "SSW", "SW", "WSW", "W", "WNW", "NW", "NNW"];
-  let val = Math.floor((num / 22.5) + 0.5);
-  return arrayOfDirectionCodes[(val % 16)];
-}
-
-function convertMillibarsToInchesOfMercury(num) {
-  return num * 0.030;
-}
-
-function getWindChill(temp, wind) {
-  if (temp <= 50 && wind >= 3) {
-    let chill = 35.74 + 0.6215 * temp - 35.75 * Math.pow(wind, 0.16) + 0.4275 * temp * Math.pow(wind, 0.16);
-    return Math.round(chill);
-  }
-  else {
-      return "N/A";
-  }
-}
-
-function displayResults(weatherData) {
-  currentTemp.innerHTML = `<strong>${weatherData.main.temp.toFixed(0)}</strong>`;
-
-  const iconsrc = `https://openweathermap.org/img/w/${weatherData.weather[0].icon}.png`;
-  const desc = weatherData.weather[0].description;
-
-  weatherIcon.setAttribute('src', iconsrc);
-  weatherIcon.setAttribute('alt', desc);
-  captionDesc.textContent = capitalize(desc);
-  humidity.textContent = weatherData.main.humidity;
-  pressure.textContent = convertMillibarsToInchesOfMercury(weatherData.main.pressure).toFixed(1);
-  windSpeed.textContent = weatherData.wind.speed.toFixed(0);
-  windChill.textContent = getWindChill(weatherData.main.temp.toFixed(0), weatherData.wind.speed);
-  windDirection.textContent = degToCompass(weatherData.wind.deg)
-}
-
-apiFetch();
-
-
-
-
-        </script>
+        <p>wind-speed: <br> MPR<span id="wind-speed"></span></p><br>
+        <p>wind-chill: <br>&deg;F <span id="wind-chill"></span></p>     
         
       
     </div>
@@ -258,18 +154,13 @@ apiFetch();
       
 
             <footer class="footer">
-                <img class= "footerlogo" src="https://raw.githubusercontent.com/eplingk/eplingk.github.io/main/wdd230/chamber/ifcoclogo.webp" alt="logo" width="40" height="40">
-                <p>Contact us at: (208) 523-1010 <br>
-                or ifcocemail@gmail.com</p>
+                <img class= "footerlogo" src="https://raw.githubusercontent.com/eplingk/eplingk.github.io/main/wdd230/chamber/ifcoclogo.webp" alt="logo" width="80" height="80">
+                <p><b>Contact us at:</b> (208) 523-1010 <br>
+               <b>or</b> ifcocemail@gmail.com</p><br>
                 
                 <p id="map"><a href = "https://www.google.com/maps/place/Idaho+Falls,+ID/@43.4926827,-112.1037469,12z/data=!3m1!4b1!4m5!3m4!1s0x5354594e739512b5:0x2311c9fc094c49c9!8m2!3d43.4926607!4d-112.0407584">Link to our map</a></p>
-                    <div  id="lastModified">
-                    <script>
-                        if (Date.parse(document.lastModified) != 0)
-                            document.write('<p><b>©2022 IF Chamber of Commerce | Katie Epling | WDD 230 Project |Weather info provided by: OpenWeather API| Last Modification: '
-                                           + document.lastModified
-                                           + '</i></small>');
-                        </script>
+                    <br><div  id="lastModified">
+                    
                         </div>
             </footer>
     </body>

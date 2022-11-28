@@ -1,9 +1,9 @@
 const APPID = "0570247ac33ba42aae0b5a1480a6378c";
 
+// select HTML elements in the document
 const currentTemp = document.querySelector('#current-temp');
 const weatherIcon = document.querySelector('#weather-icon');
 const captionDesc = document.querySelector('figcaption');
-const cityName = document.querySelector('#city-name');
 const humidity = document.querySelector("#humidity");
 const pressure = document.querySelector("#pressure");
 const windSpeed = document.querySelector("#wind-speed");
@@ -17,7 +17,6 @@ async function apiFetch() {
     const response = await fetch(url);
     if (response.ok) {
       const data = await response.json();
-      console.log(data); // this is for testing the call
       displayResults(data);
     } else {
         throw Error(await response.text());
@@ -47,24 +46,30 @@ function convertMillibarsToInchesOfMercury(num) {
   return num * 0.030;
 }
 
+function getWindChill(temp, wind) {
+  if (temp <= 50 && wind >= 3) {
+    let chill = 35.74 + 0.6215 * temp - 35.75 * Math.pow(wind, 0.16) + 0.4275 * temp * Math.pow(wind, 0.16);
+    return Math.round(chill);
+  }
+  else {
+      return "N/A";
+  }
+}
+
 function displayResults(weatherData) {
   currentTemp.innerHTML = `<strong>${weatherData.main.temp.toFixed(0)}</strong>`;
-  windSpeed.innerHTML = `${weatherData.main.speed}`;
-  windChill.innerHTML = `${weatherData.main.feels_like}`;
-   
+
   const iconsrc = `https://openweathermap.org/img/w/${weatherData.weather[0].icon}.png`;
   const desc = weatherData.weather[0].description;
 
   weatherIcon.setAttribute('src', iconsrc);
   weatherIcon.setAttribute('alt', desc);
   captionDesc.textContent = capitalize(desc);
-  cityName.textContent = weatherData.name;
   humidity.textContent = weatherData.main.humidity;
   pressure.textContent = convertMillibarsToInchesOfMercury(weatherData.main.pressure).toFixed(1);
   windSpeed.textContent = weatherData.wind.speed.toFixed(0);
-  windChill.textContent = weatherData.main.feels_like.toFixed(0);
+  windChill.textContent = getWindChill(weatherData.main.temp.toFixed(0), weatherData.wind.speed);
   windDirection.textContent = degToCompass(weatherData.wind.deg)
 }
 
 apiFetch();
-
