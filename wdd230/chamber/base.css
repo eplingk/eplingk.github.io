@@ -214,9 +214,7 @@ p{
     position: absolute;
     top: 5px;
     right: 15px;
-    font-size: 1.2rem;
     color: #0e2431;
-   
    
   }
   
@@ -258,6 +256,7 @@ form.form {
   margin-bottom: 5%;
   margin-left: 15%;
   box-shadow: 10px 5px 5px black;
+  margin-top: 150px;
 }
 
 div.form {
@@ -290,7 +289,7 @@ label {
 .cards {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-  margin-top: 5%;
+  margin-top: 150px;
   
 }
 
@@ -367,8 +366,8 @@ h1{
   border-radius: 25%;
   align-items: center;
   box-shadow: 10px 5px 5px black;
-  margin-top: 35%;
   margin-bottom: -10%;
+  max-width: 500px;
 }
 
 .banner {
@@ -395,4 +394,7 @@ form.newForm {
   margin-left: 45%;
   box-shadow: 10px 5px 5px black;
   
+}
+.discoverGallery{
+  margin-top: 150px;
 }
