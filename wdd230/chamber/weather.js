@@ -1,4 +1,4 @@
-const APPID = "0570247ac33ba42aae0b5a1480a6378c";
+const APPID = "e1f87cbd079f05153d50478916d35c12";
 
 // select HTML elements in the document
 const currentTemp = document.querySelector('#current-temp');

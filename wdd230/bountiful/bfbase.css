@@ -1,0 +1,112 @@
+/* Home Page & All Pages*/
+
+/* colors: yellow: #FFF700; green: #2B8C47 */
+body{
+    overflow-x: hidden;
+  }
+
+h1{
+    font-family:"Nerko One", "sans-serif";
+}
+
+p{
+    font-family:"Saira Condensed", "monospace" ;
+}
+
+/* body{
+    background-color: #2B8C47;
+} */
+
+.favlogo{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+nav{
+    background-color: #2B8C47;
+}
+.active{
+    color: white;
+}
+a:hover{
+    color: #FFF700;
+}
+        /* Hamburger Menu */
+.nav-container {
+    display: block;
+    position: relative;
+    height: 60px;
+  }
+  
+  .nav-container .checkbox {
+    position: absolute;
+    display: block;
+    height: 32px;
+    width: 32px;
+    top: 20px;
+    left: 20px;
+    z-index: 5;
+    opacity: 0;
+    cursor: pointer;
+  }
+  
+  .nav-container .hamburger-lines {
+    display: block;
+    height: 26px;
+    width: 32px;
+    position: absolute;
+    top: 17px;
+    left: 20px;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  
+  .nav-container .hamburger-lines .line {
+    display: block;
+    height: 4px;
+    width: 100%;
+    border-radius: 10px;
+    background: #0e2431;
+  }
+  
+  .nav-container .hamburger-lines .line1 {
+    transform-origin: 0% 0%;
+    transition: transform 0.4s ease-in-out;
+  }
+  
+  .nav-container .hamburger-lines .line2 {
+    transition: transform 0.2s ease-in-out;
+  }
+  
+  .nav-container .hamburger-lines .line3 {
+    transform-origin: 0% 100%;
+    transition: transform 0.4s ease-in-out;
+  }
+  .nav-container input[type="checkbox"]:checked ~ .menu-items {
+    transform: translateX(0);
+  }
+  
+  .nav-container input[type="checkbox"]:checked ~ .hamburger-lines .line1 {
+    transform: rotate(45deg);
+  }
+  
+  .nav-container input[type="checkbox"]:checked ~ .hamburger-lines .line2 {
+    transform: scaleY(0);
+  }
+  
+  .nav-container input[type="checkbox"]:checked ~ .hamburger-lines .line3 {
+    transform: rotate(-45deg);
+  }
+  
+  .nav-container input[type="checkbox"]:checked ~ .logo{
+    display: none;
+  }
+
+
+/* Fresh Page */
+
+
+/* About Us Page */
