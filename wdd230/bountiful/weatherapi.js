@@ -44,10 +44,10 @@ weatherWidget.init = function (settings) {
         //@TODO lokalizacja bez zwrotki, blad
 
         document.getElementsByClassName('ow-city-name')[0].innerHTML = weather.name;
-        document.getElementsByClassName('ow-temp-current')[0].innerHTML = Math.round(weather.main.temp) + '&deg';
-        document.getElementsByClassName('ow-pressure')[0].innerHTML = weather.main.pressure + ' hPa';
-        document.getElementsByClassName('ow-humidity')[0].innerHTML = weather.main.humidity + '%';
-        document.getElementsByClassName('ow-wind')[0].innerHTML = weather.wind.speed + ' km/h';
+        document.getElementsByClassName('ow-temp-current')[0].innerHTML = '<b>'+ Math.round((weather.main.temp*9/5)+32) + '&deg F</b';
+        document.getElementsByClassName('ow-pressure')[0].innerHTML = 'Pressure: <b>' + weather.main.pressure + ' hPa </b>';
+        document.getElementsByClassName('ow-humidity')[0].innerHTML = 'Humidity: <b>'+ weather.main.humidity + '% </b>';
+        document.getElementsByClassName('ow-wind')[0].innerHTML = 'Wind: <b>'+ weather.wind.speed + ' km/h </b>';
         if (!!this.settings.icon_mapping[weather.weather[0].icon]) {
             let icon = this.settings.icon_mapping[weather.weather[0].icon];
             let ico_current =  document.getElementsByClassName('ow-ico-current')[0];
@@ -95,8 +95,8 @@ weatherWidget.init = function (settings) {
         for (let day in fs) {
             let icon = this.settings.icon_mapping[this.getIconWithHighestOccurence(fs[day].icons)];
             let fi = forecast_items[counter];
-            fi.getElementsByClassName('max')[0].innerHTML = Math.round(fs[day].temp_max) + '&deg';
-            fi.getElementsByClassName('min')[0].innerHTML = Math.round(fs[day].temp_min) + '&deg';
+            fi.getElementsByClassName('max')[0].innerHTML = '<b>' + Math.round((fs[day].temp_max*9/5)+32) + '&deg F </b>';
+            fi.getElementsByClassName('min')[0].innerHTML = '<b>' + Math.round((fs[day].temp_min*9/5)+32) + '&deg F </b>';
             fi.getElementsByClassName('ow-day')[0].innerHTML = fs[day].dow;
             let ico_current =  fi.getElementsByClassName('ow-ico-forecast')[0];
             if (ico_current.classList) {
@@ -169,5 +169,5 @@ weatherWidget.getIconWithHighestOccurence = function (a) {
 // run the widget
 let widget = Object.create(weatherWidget);
 widget.init({
-  city_name: 'Carlsbad, California'
+  city_name: 'Carlsbad,'
 });

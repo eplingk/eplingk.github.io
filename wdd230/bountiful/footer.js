@@ -1,0 +1,1 @@
+document.getElementById("lastModified").innerHTML = `©2022 Bountiful Foods | Katie Epling | WDD 230 Project | Last Modification: ${document.lastModified}`;

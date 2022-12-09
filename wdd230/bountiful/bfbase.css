@@ -1,8 +1,43 @@
 /* Home Page & All Pages*/
 
 /* colors: yellow: #FFF700; green: #2B8C47 */
+
+.largeScreenNav{
+  display: none;
+}
+
+@media (max-width:767px) {
+  .favlogo {
+      max-width: 100%;
+      max-height: 100%;
+  }
+}
+
+@media (min-width:768px) {
+  .favlogo {
+      max-width: 240px;
+      max-height: 240px;
+  }
+}
+
+@media (min-width:992px) {
+  .favlogo {
+      max-width: 314px;
+      max-height: 314px;
+  }
+}
+
+@media (min-width:1200px) {
+  .favlogo {
+      max-width: 380px;
+      max-height: 380px;
+  }
+}
+
 body{
     overflow-x: hidden;
+    justify-content: center;
+    align-items: center;
   }
 
 h1{
@@ -13,24 +48,32 @@ p{
     font-family:"Saira Condensed", "monospace" ;
 }
 
-/* body{
-    background-color: #FFF700;
-} */
+
 
 .favlogo{
     display: block;
     margin-left: auto;
     margin-right: auto;
 }
-
-nav{
-    background-color: #2B8C47;
+.navbar .menu-items {
+  padding-top: 120px;
+  height: 50vh;
+  width: 40%;
+  transform: translate(-150%);
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.5s ease-in-out;
+  text-align: center;
+  background-color: #2B8C47;
+  position: relative;
+  z-index: 1;
+  
+  
 }
 
+
 .menu-items li{
-  display: inline;
-  float: left;
-  margin-left: 15%;
+  margin-top: 5%;
   padding-left: 3%;
   padding-top: .5%;
 }
@@ -76,6 +119,10 @@ button:hover{
     height: 60px;
   }
   
+  nav{
+    background-color: #2B8C47;
+  }
+
   .nav-container .checkbox {
     position: absolute;
     display: block;
@@ -145,6 +192,25 @@ button:hover{
   /* Weather Display */
   #demo{
     background-color: rgb(122, 205, 233);
+    max-width: 350px;
+  }
+  .ow-city-name, .ow-day{
+    font-family: "Nerko One";
+    font-size: 32px;
+    margin-left: 2%;
+  }
+  .max, .min{
+    font-family: "Saira Condensed";
+    margin-left: 5%;
+  }
+  .ow-temp-current{
+    font-family: "Saira Condensed";
+    font-size: 20px;
+    margin-left: 4%;
+  }
+  .ow-pressure, .ow-humidity, .ow-wind{
+    font-family: "Saira Condensed";
+    margin-left: 2%;
   }
 
   /* Image Gallery */
@@ -162,12 +228,13 @@ button:hover{
     flex: 25%;
     max-width: 25%;
     padding: 0 4px;
+    margin-left: 7%;
   }
   
   .column img {
     margin-top: 8px;
     vertical-align: middle;
-    width: 100%;
+    width: 50%;
   }
   
   /* Responsive layout - makes a two column-layout instead of four columns */
@@ -186,6 +253,27 @@ button:hover{
       flex: 100%;
       max-width: 100%;
     }
+  }
+
+  /* Footer */
+  footer li{
+    display: inline;
+    
+  }
+  footer ul{
+    margin-left: 45%;
+  }
+  footer li a:hover{
+    opacity: .5;
+  }
+  footer{
+    background-color: #2B8C47;
+    padding: 2%;
+  }
+  #lastModified{
+    font-family: "Nerko One";
+    font-size: 32px;
+    margin-left: 20%;
   }
 
 /* Fresh Page */
