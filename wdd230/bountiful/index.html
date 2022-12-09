@@ -6,6 +6,7 @@
         <meta name="viewport" content="width=device-width, inital-scale=1.0">
         <title>Bountiful Foods</title>
         <script type="text/javascript" src="banner.js" defer></script>
+        <script type="text/javascript" src="weatherapi.js" defer></script>
         <link rel="stylesheet" href="bfbase.css"> 
         <link rel="stylesheet" href="bfmedium.css"> 
         <link rel="stylesheet" href="bflarge.css">
@@ -38,17 +39,112 @@
     </header>
 
     <body>
+
+      <section id="demo">
+        <div class="ow-widget">
+            <div class="ow-row">
+                <span class="ow-city-name"></span>
+            </div>
+            <div class="ow-row">
+                <div class="wi ow-ico ow-ico-current pull-left"></div>
+                <div class="ow-temp-current pull-left"></div>
+                <div class="ow-current-desc pull-left">
+                    <div>Pressure: <span class="ow-pressure"></span></div>
+                    <div>Humidity: <span class="ow-humidity"></span></div>
+                    <div>Wind: <span class="ow-wind"></span></div>
+                </div>
+            </div>
+            <div class="ow-row ow-forecast">
+                <div class="ow-forecast-item">
+                    <div class="ow-day"></div>
+                    <div class="wi ow-ico ow-ico-forecast"></div>
+                    <div class="ow-forecast-temp">
+                        <span class="max"></span>
+                        <span class="min"></span>
+                    </div>
+                </div>
+    
+                <div class="ow-forecast-item">
+                    <div class="ow-day"></div>
+                    <div class="wi ow-ico ow-ico-forecast"></div>
+                    <div class="ow-forecast-temp">
+                        <span class="max"></span>
+                        <span class="min"></span>
+                    </div>
+                </div>
+    
+                <div class="ow-forecast-item">
+                    <div class="ow-day"></div>
+                    <div class="wi ow-ico ow-ico-forecast"></div>
+                    <div class="ow-forecast-temp">
+                        <span class="max"></span>
+                        <span class="min"></span>
+                    </div>
+                </div>
+    
+                <div class="ow-forecast-item">
+                    <div class="ow-day"></div>
+                    <div class="wi ow-ico ow-ico-forecast"></div>
+                    <div class="ow-forecast-temp">
+                        <span class="max"></span>
+                        <span class="min"></span>
+                    </div>
+                </div>
+    
+            </div>
+        </div>
+    </section>
             
-            <h1>This is a practice Heading</h1>
+            <h1>Fresh and local. Just for you.</h1>
         <div class="imageGallery"></div>
-        <button type="button">Customize A Drink</button>
-            <p>This is a practice paragraph. - Home Page</p>
+        <a href="fresh.html">  
+          <button>Customize A Drink</button>  
+        </a>
+            <p>You can buy the best locally grown produce right here or, order a smoothie from the same fresh ingredients.</p>
+
+            <div class="row"> 
+              <div class="column">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/15/Red_Apple.jpg/800px-Red_Apple.jpg" alt="freshfood" loading="lazy" width="300" height="300">
+                <img src="https://www.thoughtco.com/thmb/0yJea6e_DfAHCyQGm_Z4v_FnbZo=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/Getty_word_pairs-245000011-585a0fff3df78ce2c30310ab-5bb3813bc9e77c0026039a6b.jpg" alt="freshfood" loading="lazy" width="300" height="300">
+                <img src="data:image/jpeg;base64,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" alt="freshfood" loading="lazy" width="300" height="300">
+                <img src="https://post.healthline.com/wp-content/uploads/2020/09/strawberry_732x549-thumb-1-732x549.jpg" alt="freshfood" loading="lazy" width="300" height="300">
+                <img src="https://post.medicalnewstoday.com/wp-content/uploads/sites/3/2020/02/oranges.jpg" alt="freshfood" loading="lazy" width="300" height="300">
+                <img src="https://i0.wp.com/greatist.com/sites/default/files/Cabbage_604.jpg" alt="freshfood" loading="lazy" width="300" height="300">
+                <img src="http://www.postharvest.biz/_images/newscompany/78213/13798_modal.png" alt="freshfood" loading="lazy" width="300" height="300">
+              </div>
+              <div class="column">
+                <img src="https://fruitnvegiesrus.com.au/wp-content/uploads/2018/08/broccoli.jpg" alt="freshfood" loading="lazy" width="300" height="300">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQsNEL1Fu_YTutztr0YIh85WnvkldNPn6JZzQ&usqp=CAU" alt="freshfood" loading="lazy" width="300" height="300">
+                <img src="https://www.pngitem.com/pimgs/m/74-742813_single-fruits-and-vegetables-hd-png-download.png" alt="freshfood" loading="lazy" width="300" height="300">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSkzZAPycLa4-nn-TxAmv9TobwmnVLkhA1xHA&usqp=CAU" alt="freshfood" loading="lazy" width="300" height="300">
+                <img src="https://images.squarespace-cdn.com/content/v1/5a3586f70abd0420bf56d644/1514348080691-WWRQ7Q4VEEP3JT164N6K/fruitcrown+images+individual.004.jpeg?format=1000w" alt="freshfood" loading="lazy" width="300" height="300">
+                <img src="https://i.pinimg.com/originals/d7/fb/c4/d7fbc4752e2833c048652b312813b06d.jpg" alt="freshfood" loading="lazy" width="300" height="300">
+              </div>  
+              <div class="column">
+                <img src="https://images.squarespace-cdn.com/content/v1/5a3586f70abd0420bf56d644/1514348081423-XCVDP1DNSZS87E3DW7PI/fruitcrown+images+individual.003.jpeg" alt="freshfood" loading="lazy" width="300" height="300">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSUMnRYy6zzcIzQw0NTFO_H6g89bSXjGj8IQQ&usqp=CAU" alt="freshfood" loading="lazy" width="300" height="300">
+                <img src="https://earthtimes.org/newsimage/fruit-pressure-additive-free-nutritious_298.jpg" alt="freshfood" loading="lazy" width="300" height="300">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRg1pzCVCXsJSOtFGzlZ0UJsmfCM0uERU3gkg&usqp=CAU" alt="freshfood" loading="lazy" width="300" height="300">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRl7nqCJg-1kTtprG71XGwEDB2oCnH4TajOCZc8SgscQ2XMd-RmHbqNgb_Vwgocu78NfdY&usqp=CAU" alt="freshfood" loading="lazy" width="300" height="300">
+                <img src="http://dl.helpkade.com/wp-content/uploads/20200802/article-2406221-1B8667F8000005DC-309_634x700.jpg" alt="freshfood" loading="lazy" width="300" height="300">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/15/Red_Apple.jpg/800px-Red_Apple.jpg" alt="freshfood" loading="lazy" width="300" height="300">
+              </div>
+              <div class="column">
+                <img src="https://post.medicalnewstoday.com/wp-content/uploads/sites/3/2020/02/oranges.jpg" alt="freshfood" loading="lazy" width="300" height="300">
+                <img src="http://www.postharvest.biz/_images/newscompany/78213/13798_modal.png" alt="freshfood" loading="lazy" width="300" height="300">
+                <img src="https://earthtimes.org/newsimage/fruit-pressure-additive-free-nutritious_298.jpg" alt="freshfood" loading="lazy" width="300" height="300">
+                <img src="https://post.healthline.com/wp-content/uploads/2020/09/strawberry_732x549-thumb-1-732x549.jpg" alt="freshfood" loading="lazy" width="300" height="300">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQsNEL1Fu_YTutztr0YIh85WnvkldNPn6JZzQ&usqp=CAU" alt="freshfood" loading="lazy" width="300" height="300">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRl7nqCJg-1kTtprG71XGwEDB2oCnH4TajOCZc8SgscQ2XMd-RmHbqNgb_Vwgocu78NfdY&usqp=CAU" alt="freshfood" loading="lazy" width="300" height="300">
+              </div>
+            </div>
 
 
         <footer>
             <ul>
             <li><a class="icon" href="https://www.facebook.com/"><img src="https://eplingk.github.io/wdd230/chamber/logo-facebookpng-32204.png" alt="facebooklogo" width="20" height="20"></a></li>
             <li><a class="icon" href="https://twitter.com/"><img src="https://eplingk.github.io/wdd230/chamber/logo-twitter-png-5859.png" alt="twitterlogo" width="30" height="30"></a></li>
+            <li><a class="icon" href="https://www.instagram.com/accounts/login/"><img src="https://cdn.mos.cms.futurecdn.net/uE49BtPU4iDJAoHFEHn8m7.jpg" alt="instagramlogo" width="70" height="50"></li>
             </ul>
 
         </footer>
