@@ -100,7 +100,7 @@ a:hover {
     color: #FFF700;
 }
 
-button{
+.button{
   background-color: #2B8C47;
   color: black;
   transition: .5s;
@@ -109,7 +109,7 @@ button{
   border: none;
   padding: 5px;
 }
-button:hover{
+.button:hover{
   background-color: #FFF700;
 }
         /* Hamburger Menu */

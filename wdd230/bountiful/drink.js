@@ -1,4 +1,4 @@
-const requestURL = 'https://eplingk.github.io/wdd230/chamber/data.json';
+const requestURL = 'https://eplingk.github.io/wdd230/bountiful/fruit.json';
 const cards = document.querySelector('.cards');
 
 fetch(requestURL)  
@@ -22,9 +22,9 @@ function displayBusiness(business) {
 
 
  
-    h1.textContent = `${business.name}`;
-    h2.textContent = `${business.type}`;
-    bPhone.textContent = `${business.number}`;
+    h1.textContent = `${fruit.name}`;
+    
+    bPhone.textContent = `${fruit.nutritions.calories}`;
     bAddress.textContent = `${business.address}`;
     bUrl.textContent = `Website URL: ${business.websiteurl}`;
     bMembership.textContent = `Membership Level: ${business.membershiplevel}`;

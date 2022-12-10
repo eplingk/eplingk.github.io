@@ -28,8 +28,8 @@
               </div>  
             <div class="menu-items">
               <ul>
-              <li><a class="active" href="index.html">Home</a></li>
-              <li><a href="fresh.html">Fresh</a></li>
+              <li><a href="index.html">Home</a></li>
+              <li><a class="active" href="fresh.html">Fresh</a></li>
               <li><a href="aboutus.html">About Us</a></li>
                 </ul>
             </div>
@@ -40,8 +40,8 @@
       <nav class="largeScreenNav">
         
           <ul>
-          <li><a class="active" href="index.html">Home</a></li>
-          <li><a href="fresh.html">Fresh</a></li>
+          <li><a href="index.html">Home</a></li>
+          <li><a class="active" href="fresh.html">Fresh</a></li>
           <li><a href="aboutus.html">About Us</a></li>
             </ul>
         
@@ -51,33 +51,107 @@
     <body>
 
          
-            <h1>Fresh and local. Just for you.</h1>
+            <h1>Make your very own specialty drink right here!></h1>
         
-        <a href="fresh.html">  
-          <button>Customize A Drink</button>  
-        </a>
-            <p>Fresh Page</p>
+        <p>* = required field</p>
+        <form action="thankyou.html" method="get" class="form">
+          <div class="form">
+            <label for="name">First name*: </label>
+            <input type="text" name="name" id="Lname" required>
+          </div>
+          <div class="form">
+              <label for="email">Valid email*: </label>
+              <input type="email" name="email" id="email" placeholder="yourname@email.com" required>
+            </div>
+            <div class="form">
+              <label for="number">Phone number*: </label>
+              <input type="tel" id="phone" name="phone"
+             pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" placeholder="123-450-6789" required>
+            </div>
+            <div class="form">
+              <label for="description">Any comments </label>
+              <input type="text" name="des" id="des" required>
+            </div>
+            <!-- <label for="membership">Choose a membership:</label>
+        <select id="membership" name="membership" size="1">
+          <option value="NP">  NP Membership  </option>
+          <option value="BM">  Bronze Membership  </option>
+          <option value="SM">  Silver Membership  </option>
+          <option value="GM">  Gold Membership  </option>
+        </select><br><br>
+        <div> -->
+          <input type="hidden" id="dayAndTime" name="dayAndTime" value="CurrentDate">
             
 
-            <div class="row">
+          <!-- <div class="cards"></div>...I don't know if I need this -->
 
-              <div class="column">
-        
-                <img src="https://i0.wp.com/greatist.com/sites/default/files/Cabbage_604.jpg" alt="freshfood" loading="lazy" width="10" height="90">
-                <img src="http://www.postharvest.biz/_images/newscompany/78213/13798_modal.png" alt="freshfood" loading="lazy" width="20" height="80">
-                <img src="https://post.medicalnewstoday.com/wp-content/uploads/sites/3/2020/02/oranges.jpg" alt="freshfood" loading="lazy" width="20" height="80">
-              </div>
-              <div class="column">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/15/Red_Apple.jpg/800px-Red_Apple.jpg" alt="freshfood" loading="lazy" width="20" height="80">
-                <img src="https://images.squarespace-cdn.com/content/v1/5a3586f70abd0420bf56d644/1514348080691-WWRQ7Q4VEEP3JT164N6K/fruitcrown+images+individual.004.jpeg?format=1000w" alt="freshfood" loading="lazy" width="20" height="80">
-                <img src="https://i.pinimg.com/originals/d7/fb/c4/d7fbc4752e2833c048652b312813b06d.jpg" alt="freshfood" loading="lazy" width="20" height="80">
-              </div>
-              <div class="column">
-                <img src="https://fruitnvegiesrus.com.au/wp-content/uploads/2018/08/broccoli.jpg" alt="freshfood" loading="lazy" width="20" height="80">
-                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQsNEL1Fu_YTutztr0YIh85WnvkldNPn6JZzQ&usqp=CAU" alt="freshfood" loading="lazy" width="20" height="80">
-                <img src="https://www.thoughtco.com/thmb/0yJea6e_DfAHCyQGm_Z4v_FnbZo=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/Getty_word_pairs-245000011-585a0fff3df78ce2c30310ab-5bb3813bc9e77c0026039a6b.jpg" alt="freshfood" loading="lazy" width="20" height="80">
-                </div>
+          <div class="p-2">
+            <form onsubmit="return handleData()" method="post" action="https://postman-echo.com/post">
+            <div>
+              <p>please select no more than three fruits</p>
+            <input type="checkbox" name="send_newsletter" id="send_newsletter" />
+            <label for="send_newsletter">Apples</label>
             </div>
+            <div>
+            <input type="checkbox" name="agree" id="agree" value="yes agree"/>
+            <label for="agree">Oranges</label>
+            </div>
+            <div>
+              <input type="checkbox" name="agree" id="agree" value="yes agree"/>
+              <label for="agree">Peaches</label>
+              </div>
+              <div>
+                <input type="checkbox" name="agree" id="agree" value="yes agree"/>
+                <label for="agree">Nectarines</label>
+                </div>
+                <div>
+                  <input type="checkbox" name="agree" id="agree" value="yes agree"/>
+                  <label for="agree">Pomegranates</label>
+                  </div>
+              <div>
+              <input class="button" type="submit" name="submit" value="Submit"/>
+              </div>
+            </form>
+          </div>
+
+
+          <html>
+  <!-- An example of how to show how many times a button was clicked -->
+<!-- <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>Increment count when button is clicked</title>
+</head>
+  
+<body style="text-align: center;">
+    <h1 style="color: green;">
+        GeeksforGeeks
+    </h1>
+  
+    <h4>
+        How to count the number of 
+        times a button is clicked?
+    </h4>
+  
+    <button id="btn">Click Here!</button>
+  
+    <p>
+        Button Clicked <span 
+        id="display">0</span> Times
+    </p>
+  
+    <script type="text/javascript">
+        var count = 0;
+        var btn = document.getElementById("btn");
+        var disp = document.getElementById("display");
+  
+        btn.onclick = function () {
+            count++;
+            disp.innerHTML = count;
+        }
+    </script>
+</body>
+  
+</html> -->
 
 
 
