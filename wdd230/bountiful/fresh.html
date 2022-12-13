@@ -7,6 +7,9 @@
         <title>Bountiful Foods</title>
         <script type="text/javascript" src="footer.js" defer></script>
         <script type="text/javascript" src="drink.js" defer></script>
+        <script type="text/javascript" src="formcount.js" defer></script>
+        <script type="text/javascript" src="inputdisplay.js" defer></script>
+        <script type="text/javascript" src="calories.js" defer></script>
         <link rel="stylesheet" href="bfbase.css"> 
         <link rel="stylesheet" href="bfmedium.css"> 
         <link rel="stylesheet" href="bflarge.css">
@@ -51,27 +54,27 @@
     <body>
 
          
-            <h1>Make your very own specialty drink right here!></h1>
+            <h1>Make your very own specialty drink right here!</h1>
         
         <p>* = required field</p>
-        <form action="thankyou.html" method="get" class="form">
+        <!-- <form action="submitData" method="get" class="form">
           <div class="form">
             <label for="name">First name*: </label>
             <input type="text" name="name" id="Lname" required>
           </div>
           <div class="form">
               <label for="email">Valid email*: </label>
-              <input type="email" name="email" id="email" placeholder="yourname@email.com" required>
+              <input type="text" name="email" id="email" placeholder="yourname@email.com" required>
             </div>
             <div class="form">
               <label for="number">Phone number*: </label>
-              <input type="tel" id="phone" name="phone"
+              <input type="text" id="phone" name="phone"
              pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" placeholder="123-450-6789" required>
             </div>
             <div class="form">
               <label for="description">Any comments </label>
-              <input type="text" name="des" id="des" required>
-            </div>
+              <input type="text" name="des" id="des">
+            </div> -->
             <!-- <label for="membership">Choose a membership:</label>
         <select id="membership" name="membership" size="1">
           <option value="NP">  NP Membership  </option>
@@ -80,78 +83,80 @@
           <option value="GM">  Gold Membership  </option>
         </select><br><br>
         <div> -->
-          <input type="hidden" id="dayAndTime" name="dayAndTime" value="CurrentDate">
+          <!-- <input type="hidden" id="dayAndTime" name="dayAndTime" value="CurrentDate"> -->
             
 
-          <!-- <div class="cards"></div>...I don't know if I need this -->
+        
 
-          <div class="p-2">
-            <form onsubmit="return handleData()" method="post" action="https://postman-echo.com/post">
+          <!-- <div class="p-2">
+            <form onsubmit="return handleData()" method="post" action="">
             <div>
               <p>please select no more than three fruits</p>
-            <input type="checkbox" name="send_newsletter" id="send_newsletter" />
+            <input type="checkbox" name="fruit" id="yes agree" />
             <label for="send_newsletter">Apples</label>
             </div>
             <div>
-            <input type="checkbox" name="agree" id="agree" value="yes agree"/>
+            <input type="checkbox" name="fruit" id="agree" value="yes agree"/>
             <label for="agree">Oranges</label>
             </div>
             <div>
-              <input type="checkbox" name="agree" id="agree" value="yes agree"/>
-              <label for="agree">Peaches</label>
+              <input type="checkbox" name="fruit" id="agree" value="yes agree"/>
+              <label for="agree">Pairs</label>
               </div>
               <div>
-                <input type="checkbox" name="agree" id="agree" value="yes agree"/>
-                <label for="agree">Nectarines</label>
+                <input type="checkbox" name="fruit" id="agree" value="yes agree"/>
+                <label for="agree">Pineapple</label>
                 </div>
                 <div>
-                  <input type="checkbox" name="agree" id="agree" value="yes agree"/>
-                  <label for="agree">Pomegranates</label>
-                  </div>
-              <div>
-              <input class="button" type="submit" name="submit" value="Submit"/>
+                  <input type="checkbox" name="fruit" id="agree" value="yes agree"/>
+                  <label for="agree">Passionfruit</label>
+                  </div> -->
+              <!-- <div>
+              <input class="sbutton" type="submit" onclick="showInput()" name="submit" value="Submit"/>
               </div>
             </form>
-          </div>
+          </div> -->
+          <div class = "form">
+            <form id="theForm" method="get" action="submitData">
+                <table>
+                    <tr>
+                        <td>First name*:</td>
+                        <td><input type="text" size = "25" id="name" name="name" placeholder="Bob" required="required" /></td>
+                <tr>
+                        <td>Last name:</td>
+                        <td><input type="text" size = "25" id="lname" name="lname" placeholder="Smith" /></td>
+                <tr>
+                        <td>Email*:</td>
+                        <td><input type="text" size = "25" id="email" name="email" placeholder="Bsmith@gmail.com" required="required"/></td>
+                <tr>
+                        <td>Phone Number*:</td>
+                        <td><input type="text" size = "25" id="number" name="number" placeholder="000-000-0000" required="required"/></td>
+                <tr>
+                        <td>Fruit #1*:</td>
+                        <td><input type="text" size = "25" id="user_input" name="fruitOne" placeholder="Apple" required="required"/></td>
+                <tr>
+                        <td>Fruit #2:</td>
+                        <td><input type="text" size = "25" id="user_input" name="fruitTwo" placeholder="Pineapple" required="required"/></td>
+                <tr>
+                        <td>Fruit #3:</td>
+                        <td><input type="text" size = "25" id="user_input" name="fruitTwo" placeholder="Passionfruit" required="required"/></td>
+                <tr>
+                        <td>Any Comments:</td>
+                        <td><input type="text" size = "25" id="comment" name="comment" placeholder="How you like it prepared" required="required"/></td>
+    
+      </table>    
+        </form>
+        </div>
+            <div class = "contentright">
+                <tr>
+                    <td><input class="button" type="submit" onclick="showInput();" ></td>
+                    <td><p><span id='input'></span> </p></td>
+            </div>
+          <p><span id='input'></span> </p>
 
+          <div class="cards"></div>
+          
 
-          <html>
-  <!-- An example of how to show how many times a button was clicked -->
-<!-- <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <title>Increment count when button is clicked</title>
-</head>
-  
-<body style="text-align: center;">
-    <h1 style="color: green;">
-        GeeksforGeeks
-    </h1>
-  
-    <h4>
-        How to count the number of 
-        times a button is clicked?
-    </h4>
-  
-    <button id="btn">Click Here!</button>
-  
-    <p>
-        Button Clicked <span 
-        id="display">0</span> Times
-    </p>
-  
-    <script type="text/javascript">
-        var count = 0;
-        var btn = document.getElementById("btn");
-        var disp = document.getElementById("display");
-  
-        btn.onclick = function () {
-            count++;
-            disp.innerHTML = count;
-        }
-    </script>
-</body>
-  
-</html> -->
 
 <!-- For an example of how to display user input, go here: http://jsfiddle.net/vjk3zngh/ -->
 

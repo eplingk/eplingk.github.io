@@ -7,6 +7,7 @@
         <title>Bountiful Foods</title>
         <script type="text/javascript" src="footer.js" defer></script>
         <script type="text/javascript" src="weatherapi.js" defer></script>
+        <script type="text/javascript" src="formcount.js" defer></script>
         <link rel="stylesheet" href="bfbase.css"> 
         <link rel="stylesheet" href="bfmedium.css"> 
         <link rel="stylesheet" href="bflarge.css">
@@ -50,52 +51,51 @@
 
     <body>
 
-      <section id="demo">
-        <div class="ow-widget">
-            <div class="ow-row">
-                <span class="ow-city-name"></span>
+      <section id="weather">
+        <div class="wdiv">
+            <div class="row">
+                <span class="city-name"></span><span class="temp-current"></span>
             </div>
-            <div class="ow-row">
-                <div class="wi ow-ico ow-ico-current pull-left"></div>
-                <div class="ow-temp-current pull-left"></div>
+            <div class="row">
+                <div class="wi ico ico-current pull-left"></div>
                 <div class="ow-current-desc pull-left">
-                    <div> <span class="ow-pressure"></span></div>
-                    <div><span class="ow-humidity"></span></div>
-                    <div><span class="ow-wind"></span></div>
+                    <div> <span class="pressure"></span></div>
+                    <div><span class="humidity"></span></div>
+                    <div><span class="wind"></span></div>
                 </div>
             </div>
-            <div class="ow-row ow-forecast">
-                <div class="ow-forecast-item">
-                    <div class="ow-day"></div>
-                    <div class="wi ow-ico ow-ico-forecast"></div>
-                    <div class="ow-forecast-temp">
+            <div class="row forecast">
+                <div class="forecast-item">
+                    <div class="day"></div>
+                    <div class="wi ico ico-forecast"></div>
+                    <div class="forecast-temp">
                         <span class="max"></span>
                         <span class="min"></span>
                     </div>
                 </div>
     
-                <div class="ow-forecast-item">
-                    <div class="ow-day"></div>
-                    <div class="wi ow-ico ow-ico-forecast"></div>
-                    <div class="ow-forecast-temp">
+                <div class="forecast-item">
+                    <div class="day"></div>
+                    <div class="wi ico ico-forecast"></div>
+                    <div class="forecast-temp">
                         <span class="max"></span>
                         <span class="min"></span>
                     </div>
                 </div>
     
-                <div class="ow-forecast-item">
-                    <div class="ow-day"></div>
-                    <div class="wi ow-ico ow-ico-forecast"></div>
-                    <div class="ow-forecast-temp">
+                <div class="forecast-item">
+                    <div class="day"></div>
+                    <div class="wi ico ico-forecast"></div>
+                    <div class="forecast-temp">
                         <span class="max"></span>
                         <span class="min"></span>
                     </div>
                 </div>
     
-                <div class="ow-forecast-item">
-                    <div class="ow-day"></div>
-                    <div class="wi ow-ico ow-ico-forecast"></div>
-                    <div class="ow-forecast-temp">
+                <div class="forecast-item">
+                    <div class="day"></div>
+                    <div class="wi ico ico-forecast"></div>
+                    <div class="forecast-temp">
                         <span class="max"></span>
                         <span class="min"></span>
                     </div>
@@ -104,7 +104,7 @@
             </div>
         </div>
     </section>
-         
+         <div class="content">
             <h1>Fresh and local. Just for you.</h1>
         
         <a href="fresh.html">  
@@ -115,8 +115,10 @@
               secluded South Carlsbad State Beach. The Legoland California theme park includes rides, a water park and the SEA LIFE Aquarium. 
               The Flower Fields is a seasonal attraction, with acres of flowers. Set in a canyon, the Leo Carrillo Ranch Historic Park is home 
               to free-roaming peacocks." ― Google</p>
-              <h4>(Area where I am going to display how many times user has submitted form)</h4>
-
+              <h4>Number of drinks you have made: <span 
+        id="display">0</span></h4>
+              
+</div>
             <div class="row">
 
               <div class="column">

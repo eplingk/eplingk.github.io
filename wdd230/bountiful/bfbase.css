@@ -6,6 +6,10 @@
   display: none;
 }
 
+.content{
+  margin-left: 15%;
+}
+
 @media (max-width:767px) {
   .favlogo {
       max-width: 100%;
@@ -29,8 +33,8 @@
 
 @media (min-width:1200px) {
   .favlogo {
-      max-width: 380px;
-      max-height: 380px;
+      max-width: 600px;
+      max-height: 600px;
   }
 }
 
@@ -190,11 +194,13 @@ a:hover {
   }
 
   /* Weather Display */
-  #demo{
+  #weather{
     background-color: rgb(122, 205, 233);
-    max-width: 350px;
+    max-width: 400px;
+    max-height: 260px;
+    float: left;
   }
-  .ow-city-name, .ow-day{
+  .city-name, .day{
     font-family: "Nerko One";
     font-size: 32px;
     margin-left: 2%;
@@ -202,15 +208,17 @@ a:hover {
   .max, .min{
     font-family: "Saira Condensed";
     margin-left: 5%;
+    padding: 2%;
   }
-  .ow-temp-current{
+  .temp-current{
     font-family: "Saira Condensed";
     font-size: 20px;
     margin-left: 4%;
   }
-  .ow-pressure, .ow-humidity, .ow-wind{
+  .pressure, .humidity, .wind{
     font-family: "Saira Condensed";
     margin-left: 2%;
+    margin-top: 5%;
   }
 
   /* Image Gallery */

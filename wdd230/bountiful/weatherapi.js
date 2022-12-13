@@ -22,10 +22,6 @@ let weatherWidget = {
             '09n': 'wi-rain',
             '10d': 'wi-day-rain',
             '10n': 'wi-day-rain',
-            '11d': 'wi-thunderstorm',
-            '11n': 'wi-thunderstorm',
-            '13d': 'wi-snow',
-            '13n': 'wi-snow',
             '50d': 'wi-fog',
             '50n': 'wi-fog'
         }
@@ -41,16 +37,16 @@ weatherWidget.init = function (settings) {
         let weather = resolve[0];
         let forecast = resolve[1].list;
 
-        //@TODO lokalizacja bez zwrotki, blad
+       
 
-        document.getElementsByClassName('ow-city-name')[0].innerHTML = weather.name;
-        document.getElementsByClassName('ow-temp-current')[0].innerHTML = '<b>'+ Math.round((weather.main.temp*9/5)+32) + '&deg F</b';
-        document.getElementsByClassName('ow-pressure')[0].innerHTML = 'Pressure: <b>' + weather.main.pressure + ' hPa </b>';
-        document.getElementsByClassName('ow-humidity')[0].innerHTML = 'Humidity: <b>'+ weather.main.humidity + '% </b>';
-        document.getElementsByClassName('ow-wind')[0].innerHTML = 'Wind: <b>'+ weather.wind.speed + ' km/h </b>';
+        document.getElementsByClassName('city-name')[0].innerHTML = weather.name;
+        document.getElementsByClassName('temp-current')[0].innerHTML = '<b>'+ Math.round((weather.main.temp*9/5)+32) + '&deg F</b';
+        document.getElementsByClassName('pressure')[0].innerHTML = 'Pressure:<b>' + weather.main.pressure + 'hPa </b>';
+        document.getElementsByClassName('humidity')[0].innerHTML = 'Humidity: <b>'+ weather.main.humidity + '% </b>';
+        document.getElementsByClassName('wind')[0].innerHTML = 'Wind: <b>'+ weather.wind.speed + ' km/h </b>';
         if (!!this.settings.icon_mapping[weather.weather[0].icon]) {
             let icon = this.settings.icon_mapping[weather.weather[0].icon];
-            let ico_current =  document.getElementsByClassName('ow-ico-current')[0];
+            let ico_current =  document.getElementsByClassName('ico-current')[0];
             if (ico_current.classList) {
                 ico_current.classList.add(icon);
             } else {
@@ -59,9 +55,7 @@ weatherWidget.init = function (settings) {
 
         }
 
-        // split forecast data by day
-        // get max and min temperature for a day
-        //@TODO get average forecast by day
+      
 
         // remove todays weather from forecast
         forecast = forecast.filter((x) => {
@@ -87,7 +81,7 @@ weatherWidget.init = function (settings) {
             }
         }
 
-        let forecast_items = document.getElementsByClassName('ow-forecast-item');
+        let forecast_items = document.getElementsByClassName('forecast-item');
 
         // for each daily forecast, get weather icon with highest occurence
         // show the foreacast
@@ -97,8 +91,8 @@ weatherWidget.init = function (settings) {
             let fi = forecast_items[counter];
             fi.getElementsByClassName('max')[0].innerHTML = '<b>' + Math.round((fs[day].temp_max*9/5)+32) + '&deg F </b>';
             fi.getElementsByClassName('min')[0].innerHTML = '<b>' + Math.round((fs[day].temp_min*9/5)+32) + '&deg F </b>';
-            fi.getElementsByClassName('ow-day')[0].innerHTML = fs[day].dow;
-            let ico_current =  fi.getElementsByClassName('ow-ico-forecast')[0];
+            fi.getElementsByClassName('day')[0].innerHTML = fs[day].dow;
+            let ico_current =  fi.getElementsByClassName('ico-forecast')[0];
             if (ico_current.classList) {
                 ico_current.classList.add(icon);
             } else {
