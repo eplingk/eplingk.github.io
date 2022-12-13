@@ -285,6 +285,20 @@ a:hover {
   }
 
 /* Fresh Page */
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  margin-top: 150px;
+
+}
 
 
 /* About Us Page */
+.ceo{
+  float: left;
+  padding-right: 2%;
+}
+.ceo:hover{
+  width: 40%;
+  height: 40%;
+}

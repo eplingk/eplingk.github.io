@@ -1,4 +1,4 @@
-const requestURL = 'https://eplingk.github.io/wdd230/bountiful/fruit.json';
+const requestURL = 'https://eplingk.github.io/wdd230/chamber/data.json';
 const cards = document.querySelector('.cards');
 
 fetch(requestURL)  
@@ -6,8 +6,8 @@ fetch(requestURL)
         return response.json();
     })
     .then(function (jsonObject) {
-        const business = jsonObject['fruit'];
-        business.forEach(displayCalories);
+        const fruit = jsonObject['fruit'];
+        fruit.forEach(displayCalories);
     });
 
     function displayCalories(fruit) {
@@ -16,7 +16,7 @@ fetch(requestURL)
         let fcalories = document.createElement('p');
         
         fname.textContent = `${fruit.name}`;
-        fcalories.textContent = `${fruit.calories}`;
+        fcalories.textContent = `${fruit.nutritions.calories}`;
        
     
         card.appendChild(fname);

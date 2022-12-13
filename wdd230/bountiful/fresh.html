@@ -6,9 +6,10 @@
         <meta name="viewport" content="width=device-width, inital-scale=1.0">
         <title>Bountiful Foods</title>
         <script type="text/javascript" src="footer.js" defer></script>
-        <script type="text/javascript" src="drink.js" defer></script>
         <script type="text/javascript" src="formcount.js" defer></script>
+        <script type="text/javascript" src="dateonform.js" defer></script>
         <script type="text/javascript" src="inputdisplay.js" defer></script>
+        <script type="text/javascript" src="inputdisplaytwo.js" defer></script>
         <script type="text/javascript" src="calories.js" defer></script>
         <link rel="stylesheet" href="bfbase.css"> 
         <link rel="stylesheet" href="bfmedium.css"> 
@@ -57,67 +58,9 @@
             <h1>Make your very own specialty drink right here!</h1>
         
         <p>* = required field</p>
-        <!-- <form action="submitData" method="get" class="form">
-          <div class="form">
-            <label for="name">First name*: </label>
-            <input type="text" name="name" id="Lname" required>
-          </div>
-          <div class="form">
-              <label for="email">Valid email*: </label>
-              <input type="text" name="email" id="email" placeholder="yourname@email.com" required>
-            </div>
-            <div class="form">
-              <label for="number">Phone number*: </label>
-              <input type="text" id="phone" name="phone"
-             pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" placeholder="123-450-6789" required>
-            </div>
-            <div class="form">
-              <label for="description">Any comments </label>
-              <input type="text" name="des" id="des">
-            </div> -->
-            <!-- <label for="membership">Choose a membership:</label>
-        <select id="membership" name="membership" size="1">
-          <option value="NP">  NP Membership  </option>
-          <option value="BM">  Bronze Membership  </option>
-          <option value="SM">  Silver Membership  </option>
-          <option value="GM">  Gold Membership  </option>
-        </select><br><br>
-        <div> -->
-          <!-- <input type="hidden" id="dayAndTime" name="dayAndTime" value="CurrentDate"> -->
-            
-
-        
-
-          <!-- <div class="p-2">
-            <form onsubmit="return handleData()" method="post" action="">
-            <div>
-              <p>please select no more than three fruits</p>
-            <input type="checkbox" name="fruit" id="yes agree" />
-            <label for="send_newsletter">Apples</label>
-            </div>
-            <div>
-            <input type="checkbox" name="fruit" id="agree" value="yes agree"/>
-            <label for="agree">Oranges</label>
-            </div>
-            <div>
-              <input type="checkbox" name="fruit" id="agree" value="yes agree"/>
-              <label for="agree">Pairs</label>
-              </div>
-              <div>
-                <input type="checkbox" name="fruit" id="agree" value="yes agree"/>
-                <label for="agree">Pineapple</label>
-                </div>
-                <div>
-                  <input type="checkbox" name="fruit" id="agree" value="yes agree"/>
-                  <label for="agree">Passionfruit</label>
-                  </div> -->
-              <!-- <div>
-              <input class="sbutton" type="submit" onclick="showInput()" name="submit" value="Submit"/>
-              </div>
-            </form>
-          </div> -->
+       
           <div class = "form">
-            <form id="theForm" method="get" action="submitData">
+            <form id="theForm" method="get" action="JavaScript:generateDate()">
                 <table>
                     <tr>
                         <td>First name*:</td>
@@ -135,31 +78,114 @@
                         <td>Fruit #1*:</td>
                         <td><input type="text" size = "25" id="user_input" name="fruitOne" placeholder="Apple" required="required"/></td>
                 <tr>
-                        <td>Fruit #2:</td>
+                        <td>Fruit #2*:</td>
                         <td><input type="text" size = "25" id="user_input" name="fruitTwo" placeholder="Pineapple" required="required"/></td>
                 <tr>
-                        <td>Fruit #3:</td>
-                        <td><input type="text" size = "25" id="user_input" name="fruitTwo" placeholder="Passionfruit" required="required"/></td>
+                        <td>Fruit #3*:</td>
+                        <td>
+                          <select id="membership" name="membership" size="1">
+                            <option value="Apple">  Apple  </option>
+                            <option value="Pineapple">  Pineapple  </option>
+                            <option value="Apricot">  Apricot  </option>
+                            <option value="Banana">  Banana  </option>
+                          </select></td>
                 <tr>
                         <td>Any Comments:</td>
-                        <td><input type="text" size = "25" id="comment" name="comment" placeholder="How you like it prepared" required="required"/></td>
+                        <td><input type="text" size = "25" id="comment" name="comment" placeholder="How you like it prepared"/></td>
+                <tr>
+                        <td>Today's Date*:</td>
+                        <td><input type="text" size = "25" id="date" name="date" placeholder="12/13/2022" required="required"/></td>
+                <tr>
+                          
+                          <td><input type="hidden" name="Language" id="dateHidden"></td>
     
       </table>    
         </form>
         </div>
             <div class = "contentright">
                 <tr>
-                    <td><input class="button" type="submit" onclick="showInput();" ></td>
+                    <td><input class="button" type="submit" onclick="showInput();showDropInfo();" ></td>
                     <td><p><span id='input'></span> </p></td>
+                    
             </div>
           <p><span id='input'></span> </p>
-
-          <div class="cards"></div>
           
+          <p id="selection"></p>
 
-
-<!-- For an example of how to display user input, go here: http://jsfiddle.net/vjk3zngh/ -->
-
+          <table>
+            <tr>
+              <td>Apple</td>
+              <td>Apricot</td>
+              <td>Banana</td>
+              <td>Blackberry</td>
+              <td>Blueberry</td>
+              <td>Cherry</td>
+              <td>Dragonfruit</td>
+              <td>Fig</td>
+              <td>Gooseberry</td>
+              <td>Grape</td>
+            </tr>
+            <tr>
+              <td>52 Calories</td>
+              <td>15 Calories</td>
+              <td>96 Calories</td>
+              <td>40 Calories</td>
+              <td>29 Calories</td>
+              <td>50 Calories</td>
+              <td>60 Calories</td>
+              <td>74 Calories</td>
+              <td>44 Calories</td>
+              <td>69 Calories</td>
+            </tr>
+            <tr>
+              <td>11.4 Carbs</td>
+              <td>3.9 Carbs</td>
+              <td>22 Carbs</td>
+              <td>9 Carbs</td>
+              <td>5.5 Carbs</td>
+              <td>12 Carbs</td>
+              <td>9 Carbs</td>
+              <td>27.1 Carbs</td>
+              <td>19 Carbs</td>
+              <td>10 Carbs</td>
+            </tr>
+            <tr>
+              <td>0.3 protein</td>
+              <td>0.5 protein</td>
+              <td>1 protein</td>
+              <td>1.3 protein</td>
+              <td>0 protein</td>
+              <td>1 protein</td>
+              <td>9 protein</td>
+              <td>1.5 protein</td>
+              <td>0.8 protein</td>
+              <td>0.9 protein</td>
+            </tr>
+            <tr>
+              <td>0.4 fat</td>
+              <td>0.1 fat</td>
+              <td>0.2 fat</td>
+              <td>0.4 fat</td>
+              <td>0.3 fat</td>
+              <td>0.3 fat</td>
+              <td>1.5 fat</td>
+              <td>5.3 fat</td>
+              <td>0.3 fat</td>
+              <td>0.6 fat</td>
+            </tr>
+            <tr>
+              <td>10.3 sugar</td>
+              <td>3.2 sugar</td>
+              <td>17.2 sugar</td>
+              <td>4.5 sugar</td>
+              <td>8 sugar</td>
+              <td>8 sugar</td>
+              <td>8 sugar</td>
+              <td>6.75 sugar</td>
+              <td>16 sugar</td>
+              <td>0 sugar</td>
+            </tr>
+          </table>
 
         <footer>
             <ul>

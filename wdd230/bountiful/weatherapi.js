@@ -90,7 +90,7 @@ weatherWidget.init = function (settings) {
             let icon = this.settings.icon_mapping[this.getIconWithHighestOccurence(fs[day].icons)];
             let fi = forecast_items[counter];
             fi.getElementsByClassName('max')[0].innerHTML = '<b>' + Math.round((fs[day].temp_max*9/5)+32) + '&deg F </b>';
-            fi.getElementsByClassName('min')[0].innerHTML = '<b>' + Math.round((fs[day].temp_min*9/5)+32) + '&deg F </b>';
+            fi.getElementsByClassName('min')[0].innerHTML = '<br><b>' + Math.round((fs[day].temp_min*9/5)+32) + '&deg F </b>';
             fi.getElementsByClassName('day')[0].innerHTML = fs[day].dow;
             let ico_current =  fi.getElementsByClassName('ico-forecast')[0];
             if (ico_current.classList) {
