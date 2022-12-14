@@ -17,6 +17,35 @@
   }
 
 
+  @media (max-width:767px) {
+    .favlogo {
+        max-width: 100%;
+        max-height: 100%;
+    }
+  }
+  
+  @media (min-width:768px) {
+    .favlogo {
+        max-width: 240px;
+        max-height: 240px;
+    }
+  }
+  
+  @media (min-width:992px) {
+    .favlogo {
+        max-width: 314px;
+        max-height: 314px;
+    }
+  }
+  
+  @media (min-width:1200px) {
+    .favlogo {
+        max-width: 600px;
+        max-height: 600px;
+    }
+  }
+
+
 
 /* Fresh Page */
 
