@@ -1,4 +1,4 @@
-const requestURL = 'https://eplingk.github.io/wdd230/chamber/data.json';
+const requestURL = 'https://brotherblazzard.github.io/canvas-content/fruit.json';
 const cards = document.querySelector('.cards');
 
 fetch(requestURL)  
@@ -6,11 +6,11 @@ fetch(requestURL)
         return response.json();
     })
     .then(function (jsonObject) {
-        const fruit = jsonObject['fruit'];
+        const fruit = jsonObject[''];
         fruit.forEach(displayCalories);
     });
 
-    function displayCalories(fruit) {
+    function displayCalories() {
         let card = document.createElement('section');
         let fname = document.createElement('h3')
         let fcalories = document.createElement('p');
